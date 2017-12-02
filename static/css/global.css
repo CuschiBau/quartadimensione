@@ -1,4 +1,19 @@
+@font-face {
+  font-family: 'Bree';
+  src: url('../fonts/BreeSerif-Regular.eot');
+  src: url('../fonts/BreeSerif-Regular.woff2') format('woff2'),
+       url('../fonts/BreeSerif-Regular.woff') format('woff'),
+       url('../fonts/BreeSerif-Regular.ttf') format('truetype'),
+       url('../fonts/BreeSerif-Regular.svg#BreeSerif-Regular') format('svg'),
+       url('../fonts/BreeSerif-Regular.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
 body{
+  font-family: 'Bree', serif, monospace;
   padding: 0px;
   margin: 0px;
 }
@@ -24,25 +39,35 @@ ul.group{
   background-size: 100%;
   background-repeat: no-repeat;
 }
-.top_header > div{ background-color: rgba(256,256,256,0.6)}
+.top_header > div{ background-color: rgba(256,256,256,0.8)}
 .menu_icon_cont{
   padding-left: 20px;
   height: 100%;
+  width: 33.33333%;
 }
 .menu_icon_cont img{
   width: 30px;
   height: 30px;
 }
 .logo_cont{
-  width: 100%;
+  width: 33.33333%;
   text-align: center;
+  padding: 5px 0px;
 }
 .logo_cont img{
-  width: 200px;
+  width: 100%;
+  max-width: 150px;
   vertical-align: middle;
 }
-.menu{
+
+.top_header .spacer {
+  width: 33.33333%;
+}
+.menu-gradient {
   background: linear-gradient(90deg, #f39068, #e1ae33);
+}
+.menu {
+  padding-left: 0px;
   list-style-type: none;
 }
 .menu li{
@@ -52,7 +77,16 @@ ul.group{
 .menu li a, .menu li a:visited{
   color: #FFF;
   text-decoration: none;
+  height: 25px;
 }
+.menu li span {
+  display: none;
+}
+
+.menu-gradient {
+  padding: 0px;
+}
+
 .home_icon,
 .fanta_icon,
 .bb_icon,
@@ -71,15 +105,15 @@ ul.group{
   background-size: 20px 20px;
 }
 .bb_icon{
-  background: url('../images/ball.png') no-repeat left center;
-  background-size: 20px 20px;
+  background: url('../images/blood.png') no-repeat left center;
+  background-size: 17px 20px;
 }
 .cat_icon{
   background: url('../images/dice.png') no-repeat left center;
   background-size: 20px 20px;
 }
 .bar_icon{
-  background: url('../images/fork.png') no-repeat left center;
+  background: url('../images/food.png') no-repeat left center;
   background-size: 25px;
 }
 .footer{
@@ -94,3 +128,19 @@ ul.group{
 .footer a{
   color: #FFF;
 }
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) { ... }
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .menu li span {
+    display: block;
+  }
+}
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width:1200px) { ... }

@@ -32,7 +32,10 @@
                 $src = $folder.'/'.$folder.'-fimg.*';
                 $fileName =  explode('.',trim($file))[0];
                 $fileExt =  explode('.',trim($file))[1];
-                chdir($macro);
+                if ($macro == 'fanta') {
+                  chdir('..');
+                  chdir($macro);
+                }else { chdir($macro); }
                 $result = glob ($src);
                 ?>
                   <li>
@@ -42,7 +45,11 @@
                           ?>
                             <img src="categories/<?=$macro.'/'.$result[0]?>" style="width:200px;" />
                           <?php
-                        }else{
+                        }else if($macro == 'fanta'){
+                          ?>
+                            <img src="static/images/logo.jpg" style="width:200px;" />
+                          <?php
+                        } else {
                           ?>
                             <div style="font-size:20px;color:red;"> <?=$folder?> </div>
                           <?php
@@ -56,6 +63,7 @@
                   </li>
                   <?php
                   chdir('..');
+                  if ($macro == 'fanta') { chdir('categories'); }
               }
             }
             echo "</ul>";

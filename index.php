@@ -45,7 +45,7 @@
                       <?php
                         if (count($result) > 0) {
                           ?>
-                            <img src="<?=$startingF?>.'/'.<?=$macro.'/'.$result[0]?>" style="width:200px;" />
+                            <img src="<?=$startingF.'/'.$macro.'/'.$result[0]?>" style="width:200px;" />
                           <?php
                         }else if($macro == 'fanta'){
                           ?>

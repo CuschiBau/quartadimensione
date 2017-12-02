@@ -50,8 +50,8 @@
         }
         chdir('..');
       }
-      ?>
-
+      if (isset($_SESSION["autorizzato"])){
+    ?>
       <form enctype="multipart/form-data" action="fantacalcio" method="POST">
         <input type="hidden" name="MAX_FILE_SIZE" value="10000000000" />
         <div class="">
@@ -87,7 +87,7 @@
             ?>
               <div style="color:red; font-size:20px">This file already exist. Please set a new name below:</div>
               <div class="">
-                 <input type="text" name="newName"/>
+                <input type="text" name="newName"/>
               </div>
             <?php
             $_SESSION['already_exist'] = false;
@@ -97,6 +97,7 @@
         <?php } ?>
       </form>
     <?php
+      }
       include('templates/footer.php');
     ?>
   </body>

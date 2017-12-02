@@ -43,20 +43,20 @@
             <div style="color:green; font-size:20px;"> File uploaded successfully </div>
           <?php
           $setHomepage = $_POST['sethomepage'] ?? '';
-          if ($setHomepage != '') { writeFeed($uploadfile,$changeMacro); }
+          if ($setHomepage != '') { writeFeed($uploadfile,$value); }
           $_SESSION['upload_success'] = true;
         } else {
            echo "Upload failed";
         }
         chdir('..');
       }
-      if (isset($_SESSION["autorizzato"])){
+      
     ?>
       <form enctype="multipart/form-data" action="fantacalcio" method="POST">
         <input type="hidden" name="MAX_FILE_SIZE" value="10000000000" />
-        <div class="">
+        <div class="">        
         Selezionare lega categoria: <select name="macro">'
-
+        
         <?php
           chdir('fanta');
           $dir = getcwd();
@@ -75,9 +75,11 @@
           }
           ?>
           </select>
+         
           <input type="submit" name="selectMacro" value="Seleziona">
+          
         </div>
-        <?php if ($changeMacro) { ?>
+        <?php if ($changeMacro && isset($_SESSION["autorizzato"])) { ?>
           <div>Send this file: <input name="userfile" type="file" /></div>
           <div>New Folder Name: <input type="text" name="newFolder"/></div>
           <div>Has to be on homepage : <input type="checkbox" name="sethomepage" /></div>
@@ -94,10 +96,25 @@
           }
           ?>
           <input type="submit" name="fileUpload" value="Send File" />
-        <?php } ?>
+        <?php 
+          } 
+          
+          if($changeMacro) {
+            chdir(urldecode($changeMacro));
+            $files = scandir(getcwd().'/');
+            echo '<ul>';
+            foreach($files as $file) {
+              if (!is_dir($file)) {
+                $ad = pathinfo($file);
+                $lastModified = date('F d Y, H:i:s',filemtime($file));
+                echo '<li>'.$lastModified.'<a href="fanta/'.urldecode($changeMacro).'/'.$file.'">'.$file.'</a></li>';
+              }
+            }
+            echo '</ul>';
+          } 
+        ?>
       </form>
     <?php
-      }
       include('templates/footer.php');
     ?>
   </body>

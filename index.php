@@ -32,7 +32,7 @@
                 $src = $folder.'/'.$folder.'-fimg.*';
                 $fileName =  explode('.',trim($file))[0];
                 $fileExt =  explode('.',trim($file))[1];
-                $startingF = "categories";
+                $startingF = "categories/";
                 if ($macro == 'fanta') {
                   chdir('..');
                   chdir($macro);
@@ -59,7 +59,7 @@
                       ?>
 
                       <div class=""> Ext ico: <?=$fileExt?> </div>
-                      <div class=""> File: <a href="<?=$startingF?>/<?=$macro?>/<?=$folder?>/<?=$file?>"><?=$fileName?></a></div>
+                      <div class=""> File: <a href="<?=$startingF?><?=$macro?>/<?=$folder?>/<?=$file?>"><?=$fileName?></a></div>
                       <div class=""> Caricato in: <a href="reader?macro=<?=$macro?>&folder=<?=$folder?>"><?=$folder?></a> </div>
                     </div>
                   </li>

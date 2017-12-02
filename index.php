@@ -32,9 +32,11 @@
                 $src = $folder.'/'.$folder.'-fimg.*';
                 $fileName =  explode('.',trim($file))[0];
                 $fileExt =  explode('.',trim($file))[1];
+                $startingF = "categories";
                 if ($macro == 'fanta') {
                   chdir('..');
                   chdir($macro);
+                  $startingF = '';
                 }else { chdir($macro); }
                 $result = glob ($src);
                 ?>
@@ -43,11 +45,11 @@
                       <?php
                         if (count($result) > 0) {
                           ?>
-                            <img src="categories/<?=$macro.'/'.$result[0]?>" style="width:200px;" />
+                            <img src="<?=$startingF?>.'/'.<?=$macro.'/'.$result[0]?>" style="width:200px;" />
                           <?php
                         }else if($macro == 'fanta'){
                           ?>
-                            <img src="static/images/logo.jpg" style="width:200px;" />
+                            <img src="static/images/fanta.jpg" style="width:200px;" />
                           <?php
                         } else {
                           ?>
@@ -57,7 +59,7 @@
                       ?>
 
                       <div class=""> Ext ico: <?=$fileExt?> </div>
-                      <div class=""> File: <a href="categories/<?=$macro?>/<?=$folder?>/<?=$file?>"><?=$fileName?></a></div>
+                      <div class=""> File: <a href="<?=$startingF?>/<?=$macro?>/<?=$folder?>/<?=$file?>"><?=$fileName?></a></div>
                       <div class=""> Caricato in: <a href="reader?macro=<?=$macro?>&folder=<?=$folder?>"><?=$folder?></a> </div>
                     </div>
                   </li>

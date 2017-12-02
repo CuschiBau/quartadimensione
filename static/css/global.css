@@ -1,0 +1,96 @@
+body{
+  padding: 0px;
+  margin: 0px;
+}
+
+.group{
+  display: table;
+  width: 100%;
+  table-layout: fixed;
+}
+.group > *{
+  display: table-cell;
+  width: 100%;
+  vertical-align: middle;
+}
+ul.group{
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+
+.top_header{
+  background: url('../images/haring.jpg');
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.top_header > div{ background-color: rgba(256,256,256,0.6)}
+.menu_icon_cont{
+  padding-left: 20px;
+  height: 100%;
+}
+.menu_icon_cont img{
+  width: 30px;
+  height: 30px;
+}
+.logo_cont{
+  width: 100%;
+  text-align: center;
+}
+.logo_cont img{
+  width: 200px;
+  vertical-align: middle;
+}
+.menu{
+  background: linear-gradient(90deg, #f39068, #e1ae33);
+  list-style-type: none;
+}
+.menu li{
+  text-align: center;
+  padding: 10px 0px;
+}
+.menu li a, .menu li a:visited{
+  color: #FFF;
+  text-decoration: none;
+}
+.home_icon,
+.fanta_icon,
+.bb_icon,
+.cat_icon,
+.bar_icon{
+  padding: 5px 0px;
+  padding-left: 30px;
+  display: inline-block;
+}
+.home_icon{
+  background: url('../images/home.png') no-repeat left center;
+  background-size: 20px 20px;
+}
+.fanta_icon{
+  background: url('../images/ball.png') no-repeat left center;
+  background-size: 20px 20px;
+}
+.bb_icon{
+  background: url('../images/ball.png') no-repeat left center;
+  background-size: 20px 20px;
+}
+.cat_icon{
+  background: url('../images/dice.png') no-repeat left center;
+  background-size: 20px 20px;
+}
+.bar_icon{
+  background: url('../images/fork.png') no-repeat left center;
+  background-size: 25px;
+}
+.footer{
+  background: #0F4557;
+  padding: 10px 0px;
+}
+.footer ul{
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none;
+}
+.footer a{
+  color: #FFF;
+}

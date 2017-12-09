@@ -1,0 +1,3 @@
+.item-cont > div:nth-child(odd){
+    background: #F1F1F1;
+}

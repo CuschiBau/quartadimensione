@@ -96,7 +96,8 @@
         }
         echo "<ul>";
 
-        foreach($files as $file) {
+        $sorted = sortFiles($files);
+        foreach($sorted as $file) {
           if (!is_dir($file)) {
             $ad = pathinfo($file);
             if ($ad['filename'] != $folder.'-fimg' && $ad['filename'] != $folder.'-d' && $ad['filename'] != $folder.'-dT' ) {

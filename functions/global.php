@@ -7,4 +7,20 @@
     return $cleanUrl;
   }
 
+  function sortFiles($files){
+    usort($files, function($a, $b) {
+      return filemtime($a) < filemtime($b);
+    });
+
+    return $files;
+  }
+
+  function sortDir($files){
+    usort($files, function($a, $b) {
+      return $a > $b;
+    });
+
+    return $files;
+  }
+
 ?>

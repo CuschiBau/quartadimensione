@@ -79,6 +79,15 @@
           <input type="submit" name="selectMacro" value="Seleziona">
           
         </div>
+        
+        <?php
+          if(!isset($changeMacro) || $changeMacro == ''){
+            $dir = scandir(getcwd().'/');
+            $sorted = sortFiles($dir);
+            $changeMacro = $sorted[0];
+          }
+        ?>
+
         <?php if ($changeMacro && isset($_SESSION["autorizzato"])) { ?>
           <div>Send this file: <input name="userfile" type="file" /></div>
           <div>New Folder Name: <input type="text" name="newFolder"/></div>
@@ -98,16 +107,17 @@
           <input type="submit" name="fileUpload" value="Send File" />
         <?php 
           } 
-          
+
           if($changeMacro) {
             chdir(urldecode($changeMacro));
             $files = scandir(getcwd().'/');
+            $sorted = sortFiles($files);            
             echo '<ul>';
-            foreach($files as $file) {
+            foreach($sorted as $file) {
               if (!is_dir($file)) {
                 $ad = pathinfo($file);
                 $lastModified = date('F d Y, H:i:s',filemtime($file));
-                echo '<li>'.$lastModified.'<a href="fanta/'.urldecode($changeMacro).'/'.$file.'">'.$file.'</a></li>';
+                echo '<li><a href="fanta/'.urldecode($changeMacro).'/'.$file.'">'.$file.'</a></li>';
               }
             }
             echo '</ul>';

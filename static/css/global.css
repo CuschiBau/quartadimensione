@@ -140,6 +140,10 @@ ul.group{
   .menu li span {
     display: block;
   }
+
+  .menu li a, .menu li a:visited{
+    height: 33px;
+  }
 }
 
 /* Large devices (large desktops, 1200px and up) */

@@ -1,0 +1,6 @@
+var posto = ["Sese","Gandalf","Rodeo","Gurman", "Gianni", "Kill Time"]
+
+var random = posto[Math.floor(Math.random() * posto.length)];
+
+
+console.log("Andiamo a mangiare a: "+random)

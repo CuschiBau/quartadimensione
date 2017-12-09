@@ -8,6 +8,7 @@
     <?php
       include('templates/header.html');
       session_start();
+      $_SESSION['start'] = true;
       if (isset($_SESSION["autorizzato"])) {
         echo "già loggato";
         } else {

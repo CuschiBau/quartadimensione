@@ -1,6 +1,7 @@
 .selected_menu{
     font-weight: bold;
     text-decoration: underline;
+    cursor: pointer;
 }
 .item-cont > div:nth-child(even){
     background: #F1F1F1;

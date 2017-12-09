@@ -15,12 +15,56 @@
             <prezzo>€ 20.50</prezzo>
             <ingredienti>A, B, C</ingredienti>
         </elemento>
+        <elemento>
+            <nome>Panino 4</nome>
+            <prezzo>€ 14.50</prezzo>
+            <ingredienti>A, D,2 23</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Panino 5</nome>
+            <prezzo>€ 233.50</prezzo>
+            <ingredienti>Aasdasd</ingredienti>
+        </elemento>
     </sezione>
     <sezione data-name="bevande">
         <elemento>
             <nome>Bevanda 1</nome>
             <prezzo>€ 230.50</prezzo>
             <ingredienti>No</ingredienti>
+        </elemento>
+    </sezione>
+    <sezione data-name="snacks">
+        <elemento>
+            <nome>Snack 1</nome>
+            <prezzo>€ 0.50</prezzo>
+            <ingredienti>Si</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Snack 2</nome>
+            <prezzo>€ 0.30</prezzo>
+            <ingredienti>Sisafasfasf</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Snack 31</nome>
+            <prezzo>€ 0.50</prezzo>
+            <ingredienti>oaskdpoasd</ingredienti>
+        </elemento>
+    </sezione>
+    <sezione data-name="dolci">
+        <elemento>
+            <nome>Dolce 1</nome>
+            <prezzo>€ 0.50</prezzo>
+            <ingredienti>cacac</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Dolce 2</nome>
+            <prezzo>€ 741.30</prezzo>
+            <ingredienti>lcaspdk</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Dolce 31</nome>
+            <prezzo>€ 360.50</prezzo>
+            <ingredienti>cadasd</ingredienti>
         </elemento>
     </sezione>
 </menu>

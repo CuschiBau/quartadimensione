@@ -94,9 +94,8 @@
 
 
     <!-- ALL JS -->
-    <script type="text/javascript" src="static/js/jquery-3.2.1.js"></script>
+    
     <script type="text/javascript" src="static/js/slick.min.js"></script>
-    <script type="text/javascript" src="static/js/main.js"></script>
     <script type="text/javascript" src="static/js/index.js?update=1"></script>
   </body>
 </html>

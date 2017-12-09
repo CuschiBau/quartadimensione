@@ -32,6 +32,50 @@
             <prezzo>€ 230.50</prezzo>
             <ingredienti>No</ingredienti>
         </elemento>
+        <elemento>
+            <nome>Bevanda 2</nome>
+            <prezzo>€ 230.50</prezzo>
+            <ingredienti>No</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Bevanda 1</nome>
+            <prezzo>€ 230.50</prezzo>
+            <ingredienti>No</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Bevanda 2</nome>
+            <prezzo>€ 230.50</prezzo>
+            <ingredienti>No</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Bevanda 1</nome>
+            <prezzo>€ 230.50</prezzo>
+            <ingredienti>No</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Bevanda 2</nome>
+            <prezzo>€ 230.50</prezzo>
+            <ingredienti>No</ingredienti>
+        </elemento><elemento>
+            <nome>Bevanda 1</nome>
+            <prezzo>€ 230.50</prezzo>
+            <ingredienti>No</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Bevanda 2</nome>
+            <prezzo>€ 230.50</prezzo>
+            <ingredienti>No</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Bevanda 1</nome>
+            <prezzo>€ 230.50</prezzo>
+            <ingredienti>No</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Bevanda 2</nome>
+            <prezzo>€ 230.50</prezzo>
+            <ingredienti>No</ingredienti>
+        </elemento>
     </sezione>
     <sezione data-name="snacks">
         <elemento>

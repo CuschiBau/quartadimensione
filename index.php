@@ -9,6 +9,11 @@
     <?php
       ob_start();
     ?>
+
+    <link rel="stylesheet" type="text/css" href="static/css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="static/css/index.css?update=1"/>
+
   </head>
   <body>
     <div class="">
@@ -28,7 +33,7 @@
             fclose($myfile);
             //print_r($home);
 
-            echo "<ul>";
+            echo "<div id='cards_container'><div class='cards_title'>Ultime Notizie</div><div id='cards_slider'>";
             foreach ($home as $feed) {
               if (trim($feed) != '') {
                 $macro = explode('/',trim($feed))[0];
@@ -45,35 +50,40 @@
                 }else { chdir($macro); }
                 $result = glob ($src);
                 ?>
-                  <li>
-                    <div class="">
-                      <?php
-                        if (count($result) > 0) {
-                          ?>
-                            <img src="<?=$startingF.'/'.$macro.'/'.$result[0]?>" style="width:200px;" />
-                          <?php
-                        }else if($macro == 'fanta'){
-                          ?>
-                            <img src="static/images/fanta.jpg" style="width:200px;" />
-                          <?php
-                        } else {
-                          ?>
-                            <div style="font-size:20px;color:red;"> <?=$folder?> </div>
-                          <?php
-                        }
-                      ?>
-
-                      <div class=""> Ext ico: <?=$fileExt?> </div>
-                      <div class=""> File: <a href="<?=$startingF?><?=$macro?>/<?=$folder?>/<?=$file?>"><?=$fileName?></a></div>
-                      <div class=""> Caricato in: <a href="reader?macro=<?=$macro?>&folder=<?=$folder?>"><?=$folder?></a> </div>
+                  <div>
+                    <div class="card">
+                      
+                        <?php
+                          if (count($result) > 0) {
+                            ?>
+                             <div class="img_cont" style="background-image: url('<?=$startingF.'/'.$macro.'/'.$result[0]?>')"></div>
+                            <?php
+                          }else if($macro == 'fanta'){
+                            ?>
+                            <div class="img_cont" style="background-image: url('static/images/fanta.jpg')"></div>
+                            <?php
+                          } else {
+                            ?>
+                              <div class="img_cont" style="font-size:20px;color:red;"> <?=$folder?> </div>
+                            <?php
+                          }
+                        ?>
+                      
+                      <div class="card_infos">
+                        <div class="card_ext"> <?=$fileExt?> </div>
+                        <div class="card_text">
+                        <div class="card_fileName"><a href="<?=$startingF?><?=$macro?>/<?=$folder?>/<?=$file?>"><?=$fileName?></a></div>
+                        <div class="card_category"> Caricato in <span class="card_label"><a href="reader?macro=<?=$macro?>&folder=<?=$folder?>"><?=$folder?></a><span> </div>
+                        </div>
+                      </div>
                     </div>
-                  </li>
+                      </div>
                   <?php
                   chdir('..');
                   if ($macro == 'fanta') { chdir('categories'); }
               }
             }
-            echo "</ul>";
+            echo "</div></div>";
           }
 
       ?>
@@ -81,5 +91,12 @@
 
       <?=include('templates/footer.php');?>
     </div>
+
+
+    <!-- ALL JS -->
+    <script type="text/javascript" src="static/js/jquery-3.2.1.js"></script>
+    <script type="text/javascript" src="static/js/slick.min.js"></script>
+    <script type="text/javascript" src="static/js/main.js"></script>
+    <script type="text/javascript" src="static/js/index.js?update=1"></script>
   </body>
 </html>

@@ -48,7 +48,8 @@
       chdir('gallery');
       echo "<ul>";
       $images = scandir(getcwd().'/');
-      foreach($images as $img) {
+      $sortedImg = sortFiles($images);
+      foreach($sortedImg as $img) {
         if (!is_dir($img)) {
           $src = $macro.'/'.$folder.'/gallery/'.$img;
           ?>

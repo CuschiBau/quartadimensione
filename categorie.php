@@ -8,6 +8,7 @@
   <body>
     <?php
       include('templates/header.html');
+      include('functions/global.php');
 
       $macro = $_GET['macro'] ?? '';
       if ($macro) {
@@ -16,8 +17,9 @@
 
         $dir = getcwd();
         $files = scandir($dir.'/');
+        $sortedD = sortDir($files);
         echo "<ul>";
-        foreach($files as $file) {
+        foreach($sortedD as $file) {
           if (is_dir($file)) {
             $ad = pathinfo($file);
             if ($file != '.' && $file != '..') {
@@ -28,6 +30,7 @@
                 ?>
                   <a href="reader?macro=<?=$macro?>&folder=<?=$file?>">
                     <img src="categories/<?=$macro?>/<?=$result[0]?>" style="width:200px;" />
+                    <div><?=$file?></div>
                   </a>
                 <?php
               }else{

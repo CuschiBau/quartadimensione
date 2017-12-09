@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <?=include('templates/mainStyle.php')?>
-    <link rel="stylesheet" href="static/css/bar.css">
+    <link rel="stylesheet" href="static/css/bar.css?p=2">
     <?php
       ob_start();
     ?>
@@ -15,51 +15,42 @@
     <?php include('templates/header.html');?>
     <h1>Food & Drinks</h1>
 
-    <div>
-        <div>Panini</div>
-        <div>Bevande</div>
-        <div>Snacks</div>
-        <div>Dolci</div>
+    <div class="container text_center">
+        <div class="row">
+            <div class="col selected_menu">PANINI</div>
+            <div class="col">BEVANDE</div>
+            <div class="col">SNACKS</div>
+            <div class="col">DOLCI</div>
+        </div>
     </div>
 
     <section>
-        <div class="container item-cont">
-            <div>
-                <div class="row">
-                    <div class="col">
-                        <div>Panino1</div>
-                    </div>
-                    <div class="col">
-                        € 4.50
-                    </div>
-                </div>
-                <div>Salciccia, Peroni, Ketchap</div>
-            </div>
 
-            <div>
-                <div class="row">
-                    <div class="col">
-                        <div>Panino2</div>
-                    </div>
-                    <div class="col">
-                        € 10.50
-                    </div>
-                </div>
-                <div>Salciccia, asd, carad</div>
-            </div>
+            <?php
+                $menu = simplexml_load_file('templates/bar.xml');
+                foreach($menu->sezione as $section){
+                    echo '<div class="container item-cont" id="'.$section["data-name"].'">';
+                        foreach($section->elemento as $elemento){
+                        ?>
 
-            <div>
-                <div class="row">
-                    <div class="col">
-                        <div>Panino3</div>
-                    </div>
-                    <div class="col">
-                        € 14.50
-                    </div>
-                </div>
-                <div>Salciccia, Peroni, Ketchap</div>
-            </div>
-        </div>
+                        <div>
+                            <div class="row">
+                                <div class="col">
+                                    <div><?=$elemento->nome?></div>
+                                </div>
+                                <div class="col text_right">
+                                <?=$elemento->prezzo?>
+                                </div>
+                            </div>
+                            <div><?=$elemento->ingredienti?></div>
+                        </div>
+                            
+                        <?php
+                        }
+                    echo '</div>';
+                }
+            ?>
+
     </section>
 
     <?=include('templates/footer.php');?>

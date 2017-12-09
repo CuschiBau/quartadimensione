@@ -130,6 +130,10 @@ ul.group{
   color: #FFF;
 }
 
+.text_center{ text-align: center}
+.text_left{ text-align: left}
+.text_right{ text-align: right}
+
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 

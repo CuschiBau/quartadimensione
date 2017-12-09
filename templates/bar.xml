@@ -1,0 +1,26 @@
+<menu>
+    <sezione data-name="panini">
+        <elemento>
+            <nome>Panino 1</nome>
+            <prezzo>€ 4.50</prezzo>
+            <ingredienti>A, B, C</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Panino 3</nome>
+            <prezzo>€ 10.50</prezzo>
+            <ingredienti>A, D, B</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Panino 3</nome>
+            <prezzo>€ 20.50</prezzo>
+            <ingredienti>A, B, C</ingredienti>
+        </elemento>
+    </sezione>
+    <sezione data-name="bevande">
+        <elemento>
+            <nome>Bevanda 1</nome>
+            <prezzo>€ 230.50</prezzo>
+            <ingredienti>No</ingredienti>
+        </elemento>
+    </sezione>
+</menu>

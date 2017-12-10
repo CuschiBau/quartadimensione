@@ -6,6 +6,7 @@
     text-decoration: underline;
     cursor: pointer;
 }
+.menu_lists{ padding-bottom: 20px; }
 .item_cont > div:nth-child(even){
     background: #E6E6E6;
 }

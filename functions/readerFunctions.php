@@ -1,24 +1,17 @@
 <?php
   function changeTitle($macro,$folder,$newTitle){
     $file = $folder.'-dT.txt';
-    if (file_exists($file)) {
-      $desT = fopen($file,"w");
-      fwrite($desT, $newTitle);
-      fclose($desT);
-    }else {
-      echo "error";
-    }
+    $desT = fopen($file,"w");
+    fwrite($desT, $newTitle);
+    fclose($desT);
+    
   }
 
   function changeDesc($macro,$folder,$desc){
     $file = $folder.'-d.txt';
-    if (file_exists($file)) {
-      $desT = fopen($file,"w");
-      fwrite($desT, $desc);
-      fclose($desT);
-    }else {
-      echo "error";
-    }
+    $desT = fopen($file,"w");
+    fwrite($desT, $desc);
+    fclose($desT);
   }
 
   function changeImage($macro,$folder){

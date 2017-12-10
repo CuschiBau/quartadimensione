@@ -4,5 +4,36 @@
 }
 .game_log{
     max-width: 300px;
-
 }
+.file_list{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
+.files_title{
+    padding-top: 20px;
+    font-size: 20px;
+}
+.title_cont{ 
+    position: relative;
+    padding-right: 40px; 
+}
+.desc_cont{ 
+    position: relative;
+    padding-bottom: 30px; 
+}
+.edit_link.titolo{
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+}
+.edit_link.descrizione{
+    position: absolute;
+    right: 20px;
+    bottom: 0px;
+}
+.edit_link img{
+    width: 20px;
+    height: 20px;
+}
+.desc_cont textarea{ max-width: 100%; }

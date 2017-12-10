@@ -6,7 +6,7 @@
     <?=include('templates/mainStyle.php')?>
     <link rel="stylesheet" type="text/css" href="static/css/slick.css"/>
     <link rel="stylesheet" type="text/css" href="static/css/slick-theme.css"/>
-    <link rel="stylesheet" href="static/css/bar.css?a=4">
+    <link rel="stylesheet" href="static/css/bar.css?a=5">
   </head>
   <body>
     <?php include('templates/header.html');?>

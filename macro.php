@@ -10,10 +10,16 @@
       include('templates/header.html');
     ?>
 
-    <ul>
+    <h1 class="main_title container">Giochi</h1>
+
+    <section class="container">
+      
+    </section>
+
+    <!-- <ul>
       <li> <a href="categorie?macro=Macro%201">Macro 1</a> </li>
       <li> <a href="categorie?macro=Macro%202">Macro 2</a> </li>
-    </ul>
+    </ul> -->
 
     <?php
       include('templates/footer.php')

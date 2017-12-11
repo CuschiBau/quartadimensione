@@ -1,20 +1,21 @@
 <?php
-  function changeTitle($macro,$folder,$newTitle){
+  function changeTitle($url,$macro,$folder,$newTitle){
     $file = $folder.'-dT.txt';
     $desT = fopen($file,"w");
     fwrite($desT, $newTitle);
     fclose($desT);
-    
+    header('Location:'.$url);
   }
 
-  function changeDesc($macro,$folder,$desc){
+  function changeDesc($url,$macro,$folder,$desc){
     $file = $folder.'-d.txt';
     $desT = fopen($file,"w");
     fwrite($desT, $desc);
     fclose($desT);
+    header('Location:'.$url);
   }
 
-  function changeImage($macro,$folder){
+  function changeImage($url,$macro,$folder){
     if ($_FILES['newImage']) {
       $allowed =  array('png' ,'jpg','jpeg');
       $filename = $_FILES['newImage']['name'];
@@ -34,6 +35,12 @@
         }
       }
     }
+    header('Location:'.$url);
+  }
+
+  function removeFile($url,$file){
+    if(file_exists($file)) unlink($file);
+    header('Location:'.$url);
   }
 
   function printGallery($macro,$folder){
@@ -59,7 +66,7 @@
     }
   }
 
-  function uploadInGallery($macro,$folder){
+  function uploadInGallery($url,$macro,$folder){
     if (!is_dir('gallery')) {
       mkdir('gallery',0700);
     }
@@ -74,6 +81,7 @@
       //echo "File is valid, and was successfully uploaded.</br>";
     }
     chdir('..');
+    header('Location:'.$url);
   }
 
 ?>

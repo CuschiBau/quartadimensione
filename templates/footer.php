@@ -22,7 +22,7 @@
 
 <div id="js_container">
   <script type="text/javascript" src="static/js/jquery-3.2.1.js"></script>
-  <script type="text/javascript" src="static/js/main.js?p=3"></script>
+  <script type="text/javascript" src="static/js/main.js?p=4"></script>
 </div>
 
 <?php

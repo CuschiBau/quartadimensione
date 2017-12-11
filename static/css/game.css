@@ -1,20 +1,32 @@
 .game_logo{
     text-align: center;
-    padding: 20px;
+    padding: 20px 0px;; 
+    position: relative;
 }
-.game_log{
-    max-width: 300px;
+.game_logo img{ max-width: 100%; }
+.edit_link.image{
+    position: absolute;
+    right: calc(40% - 200px);
+    bottom: 40%;
 }
 .file_list{
     list-style-type: none;
     margin: 0px;
     padding: 0px;
 }
+.remove_btn{
+    background: none;  
+    padding: 0px;  
+}
+.remove_btn img{
+    width: 30px; 
+    height: 30px;
+}    
 .files_title, .gallery_title{
     padding-top: 20px;
     font-size: 20px;
 }
-.title_cont, .gallery_cont{ 
+.logged_user .title_cont,.logged_user .gallery_cont{ 
     position: relative;
     padding-right: 40px; 
 }
@@ -59,4 +71,15 @@
 .gallery_item img{
     max-width: 100%;
     max-height: 100%;
+}
+
+@media (max-width: 768px) {
+    .edit_link.image{ 
+        right: 5px; 
+        bottom: 25px;
+        background: #FFF;
+        border: 1px solid #000;
+        width: 30px;
+        height: 30px;   
+    }
 }

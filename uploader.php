@@ -16,8 +16,9 @@
         echo "<h1 class='main_title'>Carica Files</h1>";
         $return = $_POST['fileUpload'] ?? '';
         $changeMacro = $_POST['macro'] ?? '';
+        $_SESSION['upload_success'] = false;
+        
         if ($return) {
-          $_SESSION['upload_success'] = false;
           chdir('categories');
           chdir(urldecode($changeMacro));
           $value = $_POST['dir'] ?? '';
@@ -62,6 +63,7 @@
           echo "An error has occurred please reload the page";
           $_SESSION['empty_tmp_cat'] = false;
         }else if (isset($_SESSION["autorizzato"])) {
+          chdir(__DIR__); // reset position
           ?>
 
           <form enctype="multipart/form-data" action="uploader.php" method="POST">
@@ -74,6 +76,7 @@
                     <select name="macro">'
 
                     <?php
+                    echo '<!--'.getcwd().'-->';
                     chdir('categories');
                     $dir = getcwd();
                     $files = scandir($dir.'/');

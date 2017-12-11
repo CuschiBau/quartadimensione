@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <title>Categorie</title>
     <?=include('templates/mainStyle.php')?>
-    <link rel="stylesheet" type="text/css" href="static/css/game.css?update=3"/>
+    <link rel="stylesheet" type="text/css" href="static/css/game.css?update=6"/>
   </head>
   <body>
     <?php
       session_start();
       include('templates/header.html');
-      echo "<div id='main_cont' class='container'>";
+      $loggedClass = isset($_SESSION["autorizzato"]) ? 'logged_user' : 'guest_user';
+      echo "<div id='main_cont' class='container ".$loggedClass."'>";
 
         include('functions/global.php');
         include('functions/readerFunctions.php');
@@ -26,10 +27,12 @@
           $imageUpload = $_POST['imageUpload'] ?? '';
           $newTitle = $_POST['newTitle'] ?? '';
           $description = $_POST['description'] ?? '';
+          $remove = $_POST['removeFile'] ?? '';
           if (isset($_SESSION["autorizzato"])){
-            if ($imageUpload) { changeImage($macro,$folder); }
-            if($newTitle) { changeTitle($macro,$folder,$newTitle);}
-            if ($description) { changeDesc($macro,$folder,$description); }
+            if ($imageUpload) { changeImage($cUrl,$macro,$folder); }
+            if($newTitle) { changeTitle($cUrl,$macro,$folder,$newTitle);}
+            if ($description) { changeDesc($cUrl,$macro,$folder,$description); }
+            if ($remove) { removeFile($cUrl,$remove); }
           }
 
           $files = scandir(getcwd());
@@ -39,7 +42,7 @@
             if (count($result) > 0) {
               $src = $macro.'/'.$folder.'/'.$result[0];
               ?>
-              <img src="categories/<?=$src?>" style="width:200px;" />
+              <img src="categories/<?=$src?>" />
               <?php
             }
             $uImage = $_GET['changeImage'] ?? '';
@@ -47,20 +50,26 @@
               ?>
               <form enctype="multipart/form-data" class="" action="<?=$cUrl?>" method="post">
                 <input type="hidden" name="MAX_FILE_SIZE" value="10000000000" />
-                <div>
-                  Send this file: <input name="newImage" type="file" />
-                  <input type="submit" name="imageUpload" value="Send File" />
+                <div class="gap"></div>
+                <div class="row">
+                  <div class="col-8">
+                    <input id="newImage" name="newImage" type="file" />
+                    <label for="newImage">Seleziona Immagine </label>
+                  </div>
+                  <div class="col-4">
+                    <input type="submit" name="imageUpload" value="Carica" />
+                  </div>
                 </div>
               </form>
               <?php
             } elseif (isset($_SESSION["autorizzato"])) {
               $actual_link = $cUrl."&changeImage=1";
-              echo "<a href='".$actual_link."' class='edit_link'><img alt='Modifica Immagine' src='static/images/edit.png'></a>";
+              echo "<a href='".$actual_link."' class='edit_link image'><img alt='Modifica Immagine' src='static/images/edit.png'></a>";
             }
           echo '</div>';
 
           $return = $_POST['fileUpload'] ?? '';
-          if ($return) { uploadInGallery($macro,$folder); }
+          if ($return) { uploadInGallery($cUrl,$macro,$folder); }
 
           echo "<div class='row'>";
             echo "<div class='col-12 col-sm-6'>";
@@ -98,7 +107,7 @@
                   </form>
                   <?php
                 }
-                if (isset($_SESSION["autorizzato"])) {
+                if (isset($_SESSION["autorizzato"]) && !$uTitle) {
                   $actual_link = $cUrl."&changeTitle=1";
                   echo "<a href='".$actual_link."' class='edit_link titolo'><img alt='Modifica Titolo' src='static/images/edit.png'></a>";
                 }
@@ -127,7 +136,7 @@
                   </form>
                   <?php
                 }
-                if (isset($_SESSION["autorizzato"])) {
+                if (isset($_SESSION["autorizzato"]) && !$uDesc) {
                   $actual_link = $cUrl."&changeDesc=1";
                   echo "<a href='".$actual_link."' class='edit_link descrizione'><img alt='Modifica Descrizione' src='static/images/edit.png'></a>";
                 }
@@ -135,19 +144,39 @@
             echo "</div>";
             echo "<div class='col-12 col-sm-6'>";
               echo "<h2 class='files_title'>Files</h2>";
-              echo "<ul class='file_list'>";
+              echo '<form class="" action="'.$cUrl.'" method="post">';
+                echo "<ul class='file_list'>";
 
-              $sorted = sortFiles($files);
-              foreach($sorted as $file) {
-                if (!is_dir($file)) {
-                  $ad = pathinfo($file);
-                  $ext = pathinfo($file, PATHINFO_EXTENSION);
-                  if ($ad['filename'] != $folder.'-fimg' && $ad['filename'] != $folder.'-d' && $ad['filename'] != $folder.'-dT' ) {
-                    echo '<li><span>'.$ext.' </span><a href="categories/'.$macro.'/'.$folder.'/'.$file.'">'.$file.'</a></li>';
+                $sorted = sortFiles($files);
+                foreach($sorted as $file) {
+                  if (!is_dir($file)) {
+                    $ad = pathinfo($file);
+                    $ext = pathinfo($file, PATHINFO_EXTENSION);
+                    if ($ad['filename'] != $folder.'-fimg' && $ad['filename'] != $folder.'-d' && $ad['filename'] != $folder.'-dT' ) {
+                      ?>
+                      <li>
+                        <div class="row">
+                          <div class="col-10">
+                            <span><?=$ext?></span>
+                            <a href="categories/<?=$macro?>/<?=$folder?>/<?=$file?>"><?=$file?></a>
+                          </div>
+                          <div class="col-2 text-right">
+                            <?php if(isset($_SESSION['autorizzato'])){ ?>
+                              <span>
+                                <button class="remove_btn" name="removeFile" value="<?=$file?>">
+                                  <img src="static/images/delete.png" alt="Elimina File">
+                                </button>
+                              </span>
+                            <?php } ?>
+                          </div>
+                        </div>
+                      </li>
+                      <?php
+                    }
                   }
                 }
-              }
-              echo "</ul>";
+                echo "</ul>";
+              echo "</form>";
             echo "</div>";
           echo "</div>";
 
@@ -159,9 +188,14 @@
                 ?>
                   <form enctype="multipart/form-data" class="" action="<?=$cUrl?>" method="post">
                     <input type="hidden" name="MAX_FILE_SIZE" value="10000000000" />
-                    <div class="gap">
-                      Send this file: <input name="userfile" type="file" />
-                      <input type="submit" name="fileUpload" value="Send File" />
+                    <div class="row gap">
+                      <div class="col-12 col-sm-8">
+                        <input id="userfile" name="userfile" type="file" />
+                        <label for="userfile">Seleziona Immagine </label>
+                      </div>
+                      <div class="col-12 col-sm-4">
+                        <input type="submit" name="fileUpload" value="Carica" />
+                      </div>
                     </div>
                   </form>
                 <?php

@@ -47,8 +47,10 @@
               ?>
               <form enctype="multipart/form-data" class="" action="<?=$cUrl?>" method="post">
                 <input type="hidden" name="MAX_FILE_SIZE" value="10000000000" />
-                <div>Send this file: <input name="newImage" type="file" /></div>
-                <input type="submit" name="imageUpload" value="Send File" />
+                <div>
+                  Send this file: <input name="newImage" type="file" />
+                  <input type="submit" name="imageUpload" value="Send File" />
+                </div>
               </form>
               <?php
             } elseif (isset($_SESSION["autorizzato"])) {
@@ -69,8 +71,14 @@
                   if ($uTitle && isset($_SESSION["autorizzato"])) {
                     ?>
                     <form class="" action="<?=$cUrl?>" method="post">
-                      <input type="text" name="newTitle" value="<?=$title?>">
-                      <input type="submit" name="submit" value="Modifica" />
+                      <div class="row">
+                        <div class="col-8">
+                          <input type="text" name="newTitle" value="<?=$title?>">
+                        </div>
+                        <div class="col-4">
+                          <input type="submit" name="submit" value="Modifica" />
+                        </div>
+                      </div>
                     </form>
                     <?php
                   } else {
@@ -79,8 +87,14 @@
                 }else if ($uTitle && isset($_SESSION["autorizzato"])) {
                   ?>
                   <form class="" action="<?=$cUrl?>" method="post">
-                    <input type="text" name="newTitle" value="">
-                    <input type="submit" name="submit" value="Modifica" />
+                    <div class="row">
+                        <div class="col-8">
+                          <input type="text" name="newTitle" value="">
+                        </div>
+                        <div class="col-4">
+                          <input type="submit" name="submit" value="Modifica" />
+                        </div>
+                      </div>
                   </form>
                   <?php
                 }

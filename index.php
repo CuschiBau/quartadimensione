@@ -42,6 +42,7 @@
                     chdir($macro);
                     $startingF = '';
                   }else { chdir($macro); }
+                  echo '1: '.addslashes($src);
                   $result = glob ($src);
                   ?>
                     <div>

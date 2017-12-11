@@ -3,6 +3,7 @@
   <head>
     <title>Login</title>
     <?=include('templates/mainStyle.php')?>
+    <link rel="stylesheet" href="static/css/logged.css?a=0">
   </head>
   <body>
     <?php
@@ -56,21 +57,24 @@
               }
             }
             ?>
-            <form id="login" action="access" method="post">
-                <div id="inputs">
-                    <input id="username" name="username" type="text" placeholder="Username" autofocus required>
-                    <input id="password" name="password" type="password" placeholder="Password" required>
-                </div>
-                <div id="actions">
-                    <input type="submit" id="submit" name="login" value="Accedi">
-                    <a href="../index.php" id="back">Ritorna al sito</a>
-                </div>
-                <?php
-                if ($error) {
-                  echo "<div>Errore. Riprovare.</div>";
-                }
-                ?>
-            </form>
+            <div class="container" id="main_cont">
+
+              <h1 class="main_title">Admin Login</h1>
+
+              <form id="login" action="access" method="post">
+                  <div class="row">
+                    <div class="col-12 col-sm-4 gap"> <input id="username" name="username" type="text" placeholder="Username" autofocus required> </div>
+                    <div class="col-12 col-sm-4 gap"> <input id="password" name="password" type="password" placeholder="Password" required> </div>
+                    <div class="col-12 col-sm-4 gap m100"> <input type="submit" id="submit" name="login" value="Accedi"> </div>
+                  </div>
+                  
+                  <?php
+                  if ($error) {
+                    echo "<div>Errore. Riprovare.</div>";
+                  }
+                  ?>
+              </form>
+            </div>
             <?php
 
         }

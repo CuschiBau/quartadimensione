@@ -11,8 +11,7 @@
       chdir('categories');
       $addFanta = 'fanta/';
     }
-    //echo "pre ".end($place);
-    echo "post ".getcwd();
+
     $myfile = fopen("homefeed.txt","r");
     $home = [];
 

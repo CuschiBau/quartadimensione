@@ -1,5 +1,3 @@
-Wargames/Age Of Sigmar/pollo.jpg
-Wargames/Age Of Sigmar/hordes.jpg
-Wargames/Age Of Sigmar/loco.jpg
-fanta/Serie A/fork.png
-fanta/Serie A/dice.png
+Wargames/Age Of Sigmar/DnD_ADVL.png
+Wargames/Warhammer 40k/Age Of Sigmar-fimg.png
+Wargames/DnD/Malifaux-Logo.jpg

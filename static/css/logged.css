@@ -1,0 +1,33 @@
+/* LOGIN PAGE */
+.divide_field{
+    display: inline-block;
+    padding-left: 10px;
+}
+
+@media (max-width: 768px) { 
+    .m100 input{ width: 100%; }
+}
+
+/* UPLOADER PAGE */
+.line_height_40{ line-height: 40px; }
+textarea{ width: 100%; }
+.final_btn{
+    text-align: right;
+}
+.final_btn input{ width: 100%; }
+.success_msg{
+    color: green;
+    font-size: 20px;
+    padding: 0px 40px;
+    background: url('../images/success.png') no-repeat left center;
+    background-size: 30px 30px;
+    margin-bottom: 20px;
+}
+.error_msg{
+    color: red;
+    font-size: 20px;
+    padding: 0px 40px;
+    background: url('../images/error.png') no-repeat left center;
+    background-size: 30px 30px;
+    margin-bottom: 20px;
+}

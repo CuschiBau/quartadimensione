@@ -1,5 +1,24 @@
 <categories>
     <section>
+        <title>Wargames</title>
+        <moreLink>categorie?macro=Wargames</moreLink>
+        <item>
+            <link>reader?macro=Wargames&amp;folder=Age of Sigmar</link>
+            <image>static/images/6_sigmar.png</image>
+            <name>Age of Sigmar</name>
+        </item>
+        <item>
+            <link>reader?macro=Wargames&amp;folder=Hordes</link>
+            <image>static/images/7_hordes.jpg</image>
+            <name>Hordes</name>
+        </item>
+        <item>
+            <link>reader?macro=Wargames&amp;folder=Malifaux</link>
+            <image>static/images/8_malifaux.jpg</image>
+            <name>Malifaux</name>
+        </item>
+    </section>
+    <section>
         <title>Giochi da tavolo</title>
         <moreLink>categorie?macro=Giochi da tavolo</moreLink>
         <item>
@@ -16,44 +35,6 @@
             <link>reader?macro=Giochi da tavolo&amp;folder=Descent</link>
             <image>static/images/3_descent.png</image>
             <name>Descent</name>
-        </item>
-    </section>
-    <section>
-        <title>Giochi di ruolo</title>
-        <moreLink>categorie?macro=Giochi di ruolo</moreLink>
-        <item>
-            <link>reader?macro=Giochi di ruolo&amp;folder=Dungeon and Dragons</link>
-            <image>static/images/4_dd.png</image>
-            <name>Dungeon &amp; Dragons</name>
-        </item>
-        <item>
-            <link>reader?macro=Giochi di ruolo&amp;folder=Call of Cthulhu</link>
-            <image>static/images/9_coc.jpg</image>
-            <name>Call of Cthulhu</name>
-        </item>
-        <item>
-            <link>reader?macro=Giochi di ruolo&amp;folder=Pathfinder</link>
-            <image>static/images/5_pathfinder.png</image>
-            <name>Pathfinder</name>
-        </item>
-    </section>
-    <section>
-        <title>Giochi di miniature</title>
-        <moreLink>categorie?macro=Giochi di miniature</moreLink>
-        <item>
-            <link>reader?macro=Giochi da tavolo&amp;folder=Age of Sigmar</link>
-            <image>static/images/6_sigmar.png</image>
-            <name>Age of Sigmar</name>
-        </item>
-        <item>
-            <link>reader?macro=Giochi da tavolo&amp;folder=Hordes</link>
-            <image>static/images/7_hordes.jpg</image>
-            <name>Hordes</name>
-        </item>
-        <item>
-            <link>reader?macro=Giochi da tavolo&amp;folder=Malifaux</link>
-            <image>static/images/8_malifaux.jpg</image>
-            <name>Malifaux</name>
         </item>
     </section>
 </categories>

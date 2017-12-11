@@ -143,6 +143,7 @@ ul.group{
 .text_right{ text-align: right}
 
 .hide{ display: none; }
+.gap{ padding-bottom: 10px; }
 
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */

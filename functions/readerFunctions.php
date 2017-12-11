@@ -39,18 +39,22 @@
   function printGallery($macro,$folder){
     if (is_dir('gallery')) {
       chdir('gallery');
-      echo "<ul>";
+      echo "<div class='gallery_flex'>";
       $images = scandir(getcwd().'/');
       $sortedImg = sortFiles($images);
       foreach($sortedImg as $img) {
         if (!is_dir($img)) {
           $src = $macro.'/'.$folder.'/gallery/'.$img;
           ?>
-            <li> <img src="categories/<?=$src?>" style="width:200px;" /> </li>
+            <div class="gallery_item_cont">
+              <div class="gallery_item"> 
+                <a target="_blank" href="categories/<?=$src?>"> <img src="categories/<?=$src?>"/> </a> 
+              </div> 
+            </div>
           <?php
         }
       }
-      echo "</ul>";
+      echo "</div>";
       chdir('..');
     }
   }

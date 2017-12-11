@@ -10,11 +10,11 @@
     margin: 0px;
     padding: 0px;
 }
-.files_title{
+.files_title, .gallery_title{
     padding-top: 20px;
     font-size: 20px;
 }
-.title_cont{ 
+.title_cont, .gallery_cont{ 
     position: relative;
     padding-right: 40px; 
 }
@@ -27,6 +27,12 @@
     right: 20px;
     bottom: 10px;
 }
+
+.edit_link.gallery{
+    position: absolute;
+    left: 100px;
+    bottom: 0px;
+}
 .edit_link.descrizione{
     position: absolute;
     right: 20px;
@@ -37,3 +43,20 @@
     height: 20px;
 }
 .desc_cont textarea{ max-width: 100%; }
+.gallery_flex{
+    display: flex;    
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.gallery_item_cont{ 
+    display: inline-block;
+    padding: 0px 10px 10px 0px;
+}
+.gallery_item{
+    height: 200px;
+    max-width: 400px;
+}
+.gallery_item img{
+    max-width: 100%;
+    max-height: 100%;
+}

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Categorie</title>
     <?=include('templates/mainStyle.php')?>
-    <link rel="stylesheet" type="text/css" href="static/css/game.css?update=2"/>
+    <link rel="stylesheet" type="text/css" href="static/css/game.css?update=3"/>
   </head>
   <body>
     <?php
@@ -137,23 +137,30 @@
             echo "</div>";
           echo "</div>";
 
-          if (isset($_SESSION["autorizzato"])) {
-            $uGallery = $_GET['uploadGallery'] ?? '';
-            if ($uGallery) {
-              ?>
-                <form enctype="multipart/form-data" class="" action="<?=$cUrl?>" method="post">
-                  <input type="hidden" name="MAX_FILE_SIZE" value="10000000000" />
-                  <div>Send this file: <input name="userfile" type="file" /></div>
-                  <input type="submit" name="fileUpload" value="Send File" />
-                </form>
-              <?php
-            }else {
-              $actual_link = $cUrl."&uploadGallery=1";
-              echo "<a href='".$actual_link."'>Carica Immagini Gallery</a>";
+          echo "<div class='gallery_cont'>";
+            echo "<h2 class='gallery_title'>Gallery</h2>";
+            if (isset($_SESSION["autorizzato"])) {
+              $uGallery = $_GET['uploadGallery'] ?? '';
+              if ($uGallery) {
+                ?>
+                  <form enctype="multipart/form-data" class="" action="<?=$cUrl?>" method="post">
+                    <input type="hidden" name="MAX_FILE_SIZE" value="10000000000" />
+                    <div class="gap">
+                      Send this file: <input name="userfile" type="file" />
+                      <input type="submit" name="fileUpload" value="Send File" />
+                    </div>
+                  </form>
+                <?php
+              }else {
+                $actual_link = $cUrl."&uploadGallery=1";
+                echo "<a href='".$actual_link."' class='edit_link gallery'><img alt='Carica Immagini Gallery' src='static/images/add.png'></a>";                
+              }
             }
-          }
-
-          printGallery($macro,$folder);
+          echo "</div>";
+          
+          echo "<div class=''>";
+            printGallery($macro,$folder);
+          echo "</div>";
         }
       echo "</div>";
       include('templates/footer.php');

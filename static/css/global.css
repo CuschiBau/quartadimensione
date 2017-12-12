@@ -129,6 +129,29 @@ ul.group{
 .footer a{
   color: #FFF;
 }
+.social-icons span{
+  display: inline-block;
+  padding-right: 5px;
+}
+.social-icons a{
+  display: inline-block;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.social-icons img{
+  width: 35px;
+  height: 35px;
+}
+.footer_menu{
+  font-size: 14px;
+  line-height: 35px;
+}
+.login_icon img{
+  width: 35px;
+  height: 35px;
+  margin-right: 5px;
+}
+
 
 .main_title{
   text-transform: uppercase;

@@ -1,23 +1,47 @@
 <div class="footer container-fluid">
-  <ul class="row">
-    <?php
-    if (!isset($_SESSION)) {
-    session_start();
-    }
-
-      if (isset($_SESSION["autorizzato"])) {
+  <div class="container">
+    <div class="row">
+      <?php
+      if (!isset($_SESSION)) { session_start(); }
         ?>
-          <li class="col"><a href="logout">Logout</a> </li>
-          <li class="col"><a href="uploader">Carica Files</a> </li>
-          <li class="col"><a href="manage">Gestisci Files</a> </li>
+        <div class="col-12 col-sm-3 social-icons">
+          <span>
+            <a href="https://www.facebook.com/quarta.dimensione.50/"><img src="static/images/fb.png" alt="Facebook link"></a>
+          </span>
+          <span>
+            <a href="mailto:info@quarta-dimensione.net"><img src="static/images/email.png" alt="Manda email"></a>
+          </span>
+          <span>
+            <a href="tel:0432477575"><img src="static/images/phone.png" alt="Chiama"></a>
+          </span>
+        </div>
+        <div class="col-12 col-sm-6 text-center footer_menu">
+          <span class="align-middle"><a href="index"><span>HOME |</span></a></span>
+          <span class="align-middle"><a href="fantacalcio"><span>FANTACALCIO |</span></a></span>
+          <span class="align-middle"><a href="bbleague"><span>BLOOD BOWL |</span></a></span>
+          <span class="align-middle"><a href="macro"><span>ALTRI GIOCHI |</span></a></span>
+          <span class="align-middle"><a href="barlist"><span>FOOD &amp; DRINKS</span></a></span>
+        </div>
+        <div class="col-12 col-sm-3 text-right">
         <?php
-      }else{
+        if (isset($_SESSION["autorizzato"])) {
+          ?>
+            <div><a href="uploader">Upload Files</a> </div>            
+          <?php
+        }else{
+          ?>
+            <div class="login_icon">
+              <a href="access">
+                <img src="static/images/user.png" alt="Login">
+                <span>ADMIN LOGIN</span>                
+              </a>
+            </div>
+          <?php  
+        }
         ?>
-          <li class="col"><a href="access">Login</a></li>
-        <?php  
-      }
-    ?>
-  </ul>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div id="js_container">

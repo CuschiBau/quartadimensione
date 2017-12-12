@@ -183,6 +183,85 @@
                 </div>
               </div>
             </div>
+
+            <div class="box_content dove_siamo">
+              <div class="box_background">
+                <div class="top_image">
+                  <div class="opacize"></div>
+                </div>
+                <div class="bottom_bg"></div>
+              </div>
+              <div class="box_body">
+                <div class="box_title">DOVE SIAMO</div>
+                <div class="mobile">
+                  <div class="address_body">
+                    <div class="row">
+                      <div class="col-2" style="margin-top:5px;"> <img src="static/images/pin.png" alt="" aria-hidden="true"> </div>
+                      <div class="col-10"> 
+                        <div>Via Ermes di Colloredo 14</div>
+                        <div>Udine, Italy</div> 
+                      </div>
+                    </div>
+                    <div class="text_right">
+                      <a href="https://www.google.it/maps/place/Quarta+Dimensione/@46.0716838,13.2310544,17z/data=!4m12!1m6!3m5!1s0x477a355f02cccdc5:0x6d9f7709b20a53e7!2sQuarta+Dimensione!8m2!3d46.0716801!4d13.2332485!3m4!1s0x477a355f02cccdc5:0x6d9f7709b20a53e7!8m2!3d46.0716801!4d13.2332485?hl=en" target="_blank">
+                        <span>Apri in Maps</span>
+                        <img src="static/images/directions.png" alt="" aria-hidden="true">
+                      </a>
+                    </div>
+                    <div class="orari mobile">
+                      <img src="static/images/time.png" alt="" aria-hidden="true">
+                      <span>ORARI</span>
+                    </div>
+                  </div>
+                  <div class="times_body">
+                    <div>
+                      <div class="close_times mobile">INDIRIZZO</div>
+                      <div class="times_table">
+                        <div class="row"> <div class="col">Lunedì</div> <div class="col text_right">16.00 - 01.00</div> </div>
+                        <div class="row"> <div class="col">Martedì</div> <div class="col text_right">16.00 - 01.00</div> </div>
+                        <div class="row"> <div class="col">Mercoledì</div> <div class="col text_right">16.00 - 01.00</div> </div>
+                        <div class="row"> <div class="col">Giovedì</div> <div class="col text_right">16.00 - 01.00</div> </div>
+                        <div class="row"> <div class="col">Venerdì</div> <div class="col text_right">10.00 - 01.00</div> </div>
+                        <div class="row"> <div class="col">Sabato</div> <div class="col text_right">10.00 - 01.00</div> </div>
+                        <div class="row"> <div class="col">Domenica</div> <div class="col text_right">15.00 - 01.00</div> </div>
+                      </div>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="box_content contatti">
+              <div class="box_background">
+                <div class="top_image">
+                  <div class="opacize"></div>
+                </div>
+                <div class="bottom_bg"></div>
+              </div>
+              <div class="box_body">
+                <div class="box_title">CONTATTI</div>
+                <div>
+                  <div class="gap">
+                    <a target="_blank" href="https://www.facebook.com/quarta.dimensione.50/">
+                      <img src="static/images/fb.png" alt="Facebook link">
+                      <span>@quarta.dimensione.50</span>
+                    </a>
+                  </div>
+                  <div class="gap">
+                    <a href="mailto:info@quarta-dimensione.net">
+                      <img src="static/images/email.png" alt="Manda email">
+                      <span>info@quarta-dimensione.net</span>
+                    </a>
+                  </div>
+                  <div class="gap">
+                    <a href="tel:0432477575">
+                      <img src="static/images/phone.png" alt="Chiama">
+                      <span>0432 477575</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
             
           </div>
 

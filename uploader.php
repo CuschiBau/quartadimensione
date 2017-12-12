@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title></title>
     <?=include('templates/mainStyle.php')?>
-    <link rel="stylesheet" href="static/css/logged.css?a=3">
+    <link rel="stylesheet" href="static/css/logged.css?a=5">
   </head>
   <body>
     <?php
@@ -71,7 +71,7 @@
             <?php $hideClass = isset($_SESSION['already_exist']) && $_SESSION['already_exist'] ? 'hide' : ''  ?>
             <div class ="<?=$hideClass?>">
               <div class="row gap">
-                <div class="col-12 col-sm-4 line_height_40"> Selezionare categoria: </div>
+                <div class="col-12 col-sm-4"> Selezionare categoria: </div>
                 <div class="col-12 col-sm-8">
                   <div class="row">
                     <div class="col-7 col-sm">
@@ -99,14 +99,14 @@
             <?php if ($changeMacro) { ?>
             <div class ="<?=$hideClass?>">
               <div class="row gap">
-                <div class="col-12 col-sm-4 line_height_40">File:</div> 
+                <div class="col-12 col-sm-4">File:</div> 
                 <div class="col-12 col-sm-8">
                   <input id="userfile" name="userfile" type="file" />
                   <label for="userfile">Seleziona un file</label>
                 </div>
               </div>
               <div class="row gap">
-                <div class="col-12 col-sm-4 line_height_40">Selezionare gioco:</div>
+                <div class="col-12 col-sm-4">Selezionare gioco:</div>
                 <div class="col-12 col-sm-8">
                   <select name="dir" class="gameSelector">
 
@@ -128,18 +128,18 @@
 
               <div id="newGameInfo" class="hide">
                 <div class="row gap">
-                  <div class="col-12 col-sm-4 line_height_40">Nome nuovo gioco: </div>
+                  <div class="col-12 col-sm-4">Nome nuovo gioco: </div>
                   <div class="col-12 col-sm-8"> <input type="text" name="newFolder" placeholder="Nuovo Gioco"/> </div>
                 </div>
                 <div class="row gap">
-                  <div class="col-12 col-sm-4 line_height_40">Copertina gioco:</div> 
+                  <div class="col-12 col-sm-4">Copertina gioco:</div> 
                   <div class="col-12 col-sm-8">
                     <input id="folderfile" name="folderfile" type="file" />
                     <label for="folderfile">Seleziona un file</label>
                   </div>
                 </div>
                 <div class="row gap">
-                  <div class="col-12 col-sm-4 line_height_40">Titolo Descrizione: </div>
+                  <div class="col-12 col-sm-4">Titolo Descrizione: </div>
                   <div class="col-12 col-sm-8"> <input type="text" name="descTitle" value="" placeholder="Titolo"> </div>
                 </div>
                 <div class="row gap">

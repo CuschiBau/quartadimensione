@@ -41,11 +41,19 @@ $(document).ready(function () {
   });
 
   $(document).on('click','.orari',function(){
-    $('.times_body').css('left','50%')
+    if($(this).hasClass('mobile')) {
+      $('.times_body').css('height','215px')
+      $('.dove_siamo .box_body').css('padding-top','75px')
+    }
+    else $('.times_body').css('left','50%')
   })
 
   $(document).on('click','.close_times',function(){
-    $('.times_body').css('left','0')
+    if($(this).hasClass('mobile')) {
+      $('.times_body').css('height','0')
+      $('.dove_siamo .box_body').css('padding-top','50px')
+    }
+    else $('.times_body').css('left','0')
   })
 
 })

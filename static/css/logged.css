@@ -30,3 +30,6 @@ textarea{ width: 100%; }
     background-size: 30px 30px;
     margin-bottom: 20px;
 }
+#main_cont .row{
+    align-items: center;
+}

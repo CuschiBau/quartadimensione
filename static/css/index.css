@@ -82,7 +82,7 @@
     vertical-align: middle;
 }
 
-.orange_text{ color: orangered; }
+.orange_text{ color: #f39068; }
 .blue_text{ color: #0F4557; }
 .green_text{ color: green; } 
 
@@ -139,10 +139,10 @@
     .dove_siamo .left_box{
         background: url('../images/map.png') no-repeat;
         background-size: 100% 100%;
-        border-color: orangered;
+        border-color: #f39068;
         z-index: 30;
     }
-    .dove_siamo .left_box span{ background-color: orangered; }
+    .dove_siamo .left_box span{ background-color: #f39068; }
     .dove_siamo .right_box{ z-index: 10; }
     .dove_siamo .right_box img{
         width: 35px;
@@ -222,6 +222,7 @@
 .box_content{
     position: relative;
     margin-bottom: 20px;
+    background: #FFF;
 }
 .box_body{
     position: absolute;
@@ -230,6 +231,9 @@
     margin: 0px 10px;
     padding: 10px;
     padding-top: 50px;
+    transition: padding 500ms;
+    transition-delay: 100ms;
+    width: calc(100% - 20px);
 }
 .box_title{
     position: absolute;
@@ -242,6 +246,19 @@
     font-size: 20px;
     color: #FFF;
 }
+.box_body img{
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+}
+.box_body a, .box_body a:visited{
+    color: #000; 
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    text-decoration: none;
+    font-size: 15px;
+}  
 
 .chi_siamo .top_image{
     background: url('../images/home.jpg') no-repeat;
@@ -251,9 +268,57 @@
     background: #0F4557;
     background-size: 100% 100%;
 }
-.chi_siamo .box_title{
-    background: #0F4557;
+.chi_siamo .box_title{ background: #0F4557; }
+
+.dove_siamo .top_image{
+    background: url('../images/map.png') no-repeat;
+    background-size: 100% 100%;
 }
+.dove_siamo .bottom_bg{
+    background: #f39068;
+    background-size: 100% 100%;
+}
+.dove_siamo .box_title{ background: #f39068; }
+
+.contatti .top_image{
+    background: url('../images/contatti.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.contatti .bottom_bg{
+    background: green;
+    background-size: 100% 100%;
+}
+.contatti .box_title{ background: green; }
 
 
-
+.mobile .orari{
+    margin-top: 10px;
+    background: url('../images/upC.png') no-repeat right center;
+    background-size: 20px 20px;
+    cursor: pointer;
+}
+.mobile .times_cont{ position: relative }
+.mobile .times_body{ 
+    position: absolute;
+    bottom: 0;
+    left: 0px;
+    height: 0px;
+    background: #FFF;
+    z-index: 10;
+    transition: height 500ms;
+    overflow: hidden;
+    width: 100%;
+}
+.mobile .close_times{
+    background: url('../images/downC.png') no-repeat 10px center;
+    background-size: 20px 20px;
+    cursor: pointer;
+    padding: 10px;
+    padding-left: 40px;
+}
+.mobile .times_table > div:nth-child(even){ background: #E6E6E6; }
+.mobile .times_table > div { padding: 0 10px; }
+.dove_siamo .address_body .text_right{
+    padding: 20px 0px 10px 0px;
+    border-bottom: 1px solid #CCC;
+}

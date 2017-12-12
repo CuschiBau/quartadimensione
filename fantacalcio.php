@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Fantacalcio</title>
     <?=include('templates/mainStyle.php')?>
-    <link rel="stylesheet" href="static/css/logged.css?a=3">
+    <link rel="stylesheet" href="static/css/logged.css?a=4">
     <link rel="stylesheet" href="static/css/game.css?a=3">
   </head>
   <body>
@@ -112,7 +112,7 @@
           <?php if ($changeMacro && isset($_SESSION["autorizzato"])) { ?>
             <div class="<?=$hideClassI?>">
               <div class="row gap">
-                <div class="col-12 col-sm-4 line_height_40">File:</div> 
+                <div class="col-12 col-sm-4">File:</div> 
                 <div class="col-12 col-sm-8">
                   <input id="userfile" name="userfile" type="file" />
                   <label for="userfile">Seleziona un file</label>
@@ -120,7 +120,7 @@
               </div>
               <?php $hideClass = $changeMacro != 'other' ? 'hide' : '' ?>
               <div class="row gap <?=$hideClass?>">
-                <div class="col-12 col-sm-4 line_height_40">Nome nuova serie: </div>
+                <div class="col-12 col-sm-4">Nome nuova serie: </div>
                 <div class="col-12 col-sm-8"> <input type="text" name="newFolder" placeholder="Nuova Serie"/> </div>
               </div>
             </div>

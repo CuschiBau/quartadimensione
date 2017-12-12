@@ -35,22 +35,20 @@ ul.group{
 }
 
 .top_header{
+  position: relative;
+  z-index: 30;
   background: url('../images/haring.jpg');
   background-size: 100%;
   background-repeat: no-repeat;
 }
+.top_header .row{ align-items: center }
 .top_header > div{ background-color: rgba(256,256,256,0.8)}
-.menu_icon_cont{
-  padding-left: 20px;
-  height: 100%;
-  width: 33.33333%;
-}
+.menu_icon_cont{ cursor: pointer; }
 .menu_icon_cont img{
   width: 30px;
   height: 30px;
 }
 .logo_cont{
-  width: 33.33333%;
   text-align: center;
   padding: 5px 0px;
 }
@@ -60,11 +58,13 @@ ul.group{
   vertical-align: middle;
 }
 
-.top_header .spacer {
-  width: 33.33333%;
-}
 .menu-gradient {
+  padding: 0px;
   background: linear-gradient(90deg, #f39068, #e1ae33);
+  position: absolute;
+  top: 0;
+  transition: top 500ms;
+  z-index: 20;
 }
 .menu {
   padding-left: 0px;
@@ -82,10 +82,6 @@ ul.group{
 }
 .menu li span {
   display: none;
-}
-
-.menu-gradient {
-  padding: 0px;
 }
 
 .home_icon,
@@ -129,6 +125,7 @@ ul.group{
 .footer a{
   color: #FFF;
 }
+.social-icons{ text-align: center; }
 .social-icons span{
   display: inline-block;
   padding-right: 10px;
@@ -145,6 +142,10 @@ ul.group{
 .footer_menu{
   font-size: 14px;
   line-height: 35px;
+}
+.admin_links{ 
+  text-align: center;
+  padding-top: 10px; 
 }
 .login_icon img{
   width: 35px;
@@ -223,10 +224,22 @@ input[type="checkbox"]:checked + label {
 /* No media query since this is the default in Bootstrap */
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) { ... }
+@media (min-width: 768px) { 
+  .social-icons { text-align: left !important; }
+  .admin_links { 
+    text-align: right !important; 
+    padding-top: 0px !important;
+  }
+}
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
+  .menu_icon_cont img{ display: none; }
+  .menu-gradient{
+    position: static;
+
+  }
+
   .menu li span {
     display: block;
   }

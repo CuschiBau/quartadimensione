@@ -6,7 +6,7 @@
         ?>
         <div class="col-12 col-sm-3 social-icons">
           <span>
-            <a href="https://www.facebook.com/quarta.dimensione.50/"><img src="static/images/fb.png" alt="Facebook link"></a>
+            <a target="_blank" href="https://www.facebook.com/quarta.dimensione.50/"><img src="static/images/fb.png" alt="Facebook link"></a>
           </span>
           <span>
             <a href="mailto:info@quarta-dimensione.net"><img src="static/images/email.png" alt="Manda email"></a>
@@ -26,7 +26,18 @@
         <?php
         if (isset($_SESSION["autorizzato"])) {
           ?>
-            <div><a href="uploader">Upload Files</a> </div>            
+            <div class="login_icon gap">
+              <a href="logout">
+                <img src="static/images/user.png" alt="Login">
+                <span>LOGOUT</span>                
+              </a>
+            </div>
+            <div class="login_icon">
+              <a href="uploader">
+                <img src="static/images/upload.png" alt="Upload Files">
+                <span>UPLOAD FILES</span>                
+              </a>
+            </div>               
           <?php
         }else{
           ?>

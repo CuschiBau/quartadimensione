@@ -131,7 +131,7 @@ ul.group{
 }
 .social-icons span{
   display: inline-block;
-  padding-right: 5px;
+  padding-right: 10px;
 }
 .social-icons a{
   display: inline-block;
@@ -150,6 +150,7 @@ ul.group{
   width: 35px;
   height: 35px;
   margin-right: 5px;
+  vertical-align: middle;
 }
 
 

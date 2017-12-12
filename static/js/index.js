@@ -39,4 +39,13 @@ $(document).ready(function () {
     // settings: "unslick"
     // instead of a settings object
   });
+
+  $(document).on('click','.orari',function(){
+    $('.times_body').css('left','50%')
+  })
+
+  $(document).on('click','.close_times',function(){
+    $('.times_body').css('left','0')
+  })
+
 })

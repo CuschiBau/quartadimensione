@@ -81,3 +81,179 @@
     margin-right: 7px;
     vertical-align: middle;
 }
+
+.orange_text{ color: orangered; }
+.blue_text{ color: #0F4557; }
+.green_text{ color: green; } 
+
+/* HOME BLOCKS DESKTOP */
+@media (min-width: 768px) {
+    .mobile_view{ display: none !important; }
+
+    .desktop_view{ 
+        margin: 20px auto; 
+        max-width: 70%;
+        display: block !important;
+    }
+
+    .box_content{
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        margin-bottom: 20px;
+    }
+    .left_box{
+        min-height: 240px;
+        padding: 0px;
+        position: relative;
+        border-right: 5px solid;
+    }
+    .left_box .opacize{
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.4);
+    }
+    .left_box span{
+        display: inline-block;
+        padding: 10px;
+        color: #FFF;
+        position: absolute;
+        top: calc(50% - 25px);
+        left: calc(50% - 75px);
+        width: 150px;
+        height: 50px;
+        line-height: 25px;
+        text-align: center;
+        font-size: 20px;
+    }
+    .right_box{
+        margin: auto;
+        font-size: 18px;
+    }
+
+    .chi_siamo .left_box{
+        background: url('../images/home.jpg') no-repeat;
+        background-size: 100% 100%;
+        border-color: #0F4557;
+    }
+    .chi_siamo .left_box span{ background-color: #0F4557; }
+
+    .dove_siamo .left_box{
+        background: url('../images/map.png') no-repeat;
+        background-size: 100% 100%;
+        border-color: orangered;
+        z-index: 30;
+    }
+    .dove_siamo .left_box span{ background-color: orangered; }
+    .dove_siamo .right_box{ z-index: 10; }
+    .dove_siamo .right_box img{
+        width: 35px;
+        height: 35px;
+        margin-right: 10px;
+    }
+    .dove_siamo .right_box .text_right{
+        padding: 20px 0px 10px 0px;
+        border-bottom: 1px solid #CCC;
+    }
+    .orari{
+        margin-top: 10px;
+        background: url('../images/rightC.png') no-repeat right center;
+        background-size: 20px 20px;
+        cursor: pointer;
+    }
+    .times_cont{ position: relative }
+    .times_body{ 
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        background: #FFF;
+        z-index: 20;
+        transition: left 500ms;
+    }
+    .close_times{
+        background: url('../images/leftC.png') no-repeat left center;
+        background-size: 20px 20px;
+        cursor: pointer;
+        padding: 10px;
+        padding-left: 30px;
+    }
+    .times_table > div:nth-child(even){ background: #E6E6E6; }
+
+
+    .contatti .left_box{
+        background: url('../images/contatti.jpg') no-repeat;
+        background-size: 100% 100%;
+        border-color:green;
+    }
+    .contatti .left_box span{ background-color: green; }
+    .contatti .right_box img{
+        width: 35px;
+        height: 35px;
+        margin-right: 10px;
+    }
+    .contatti .right_box a, .contatti .right_box a:visited, .contatti .right_box span{ 
+        color: #000; 
+        display: inline-block;
+        height: 35px;
+        line-height: 35px;
+        text-decoration: none;
+    }   
+}
+
+/* HOME BLOCKS MOBILE */
+.desktop_view{ display: none;}
+.mobile_view{ 
+    margin-top: 20px; 
+    display: block; 
+}
+
+.top_image{
+    width: 100%;
+    height: 180px;
+}
+.opacize{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+.bottom_bg{
+    width: 100%;
+    height: 150px;
+}
+.box_content{
+    position: relative;
+    margin-bottom: 20px;
+}
+.box_body{
+    position: absolute;
+    bottom: 20px;
+    background: #FFF;
+    margin: 0px 10px;
+    padding: 10px;
+    padding-top: 50px;
+}
+.box_title{
+    position: absolute;
+    top: -25px;
+    left: calc(50% - 75px);
+    width: 150px;
+    height: 50px;
+    line-height: 45px;
+    text-align: center;
+    font-size: 20px;
+    color: #FFF;
+}
+
+.chi_siamo .top_image{
+    background: url('../images/home.jpg') no-repeat;
+    background-size: 100% 100%;
+}
+.chi_siamo .bottom_bg{
+    background: #0F4557;
+    background-size: 100% 100%;
+}
+.chi_siamo .box_title{
+    background: #0F4557;
+}
+
+
+

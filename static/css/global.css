@@ -144,6 +144,7 @@ ul.group{
 
 .hide{ display: none; }
 .gap{ padding-bottom: 10px; }
+.gapT{ padding-top: 10px; }
 
 input[type="text"],input[type="password"],select{
   border: 0px;
@@ -193,7 +194,7 @@ input[type="checkbox"]:checked + label {
   background: url('../images/checked.png') no-repeat left center;
   background-size: 30px 30px;
 }
-
+.line_height_40{ line-height: 40px; }
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
 

@@ -68,79 +68,85 @@
 
           <form enctype="multipart/form-data" action="uploader.php" method="POST">
             <input type="hidden" name="MAX_FILE_SIZE" value="10000000000" />
-            <div class="row gap">
-              <div class="col-12 col-sm-4 line_height_40"> Selezionare categoria: </div>
-              <div class="col-12 col-sm-8">
-                <div class="row">
-                  <div class="col-7 col-sm">
-                    <select name="macro">'
+            <?php $hideClass = isset($_SESSION['already_exist']) && $_SESSION['already_exist'] ? 'hide' : ''  ?>
+            <div class ="<?=$hideClass?>">
+              <div class="row gap">
+                <div class="col-12 col-sm-4 line_height_40"> Selezionare categoria: </div>
+                <div class="col-12 col-sm-8">
+                  <div class="row">
+                    <div class="col-7 col-sm">
+                      <select name="macro">
 
-                    <?php
-                    echo '<!--'.getcwd().'-->';
-                    chdir('categories');
-                    $dir = getcwd();
-                    $files = scandir($dir.'/');
-                    foreach($files as $file) {
-                      if (is_dir($file) && $file != '.' && $file!='..') {
-                        $selectedM = '';
-                        if($file == urldecode($changeMacro)){ $selectedM = "selected='selected'"; }
-                        echo "<option ".$selectedM." value=".urlencode($file).">".$file . "</option>";
+                      <?php
+                      chdir('categories');
+                      $dir = getcwd();
+                      $files = scandir($dir.'/');
+                      foreach($files as $file) {
+                        if (is_dir($file) && $file != '.' && $file!='..') {
+                          $selectedM = '';
+                          if($file == urldecode($changeMacro)){ $selectedM = "selected='selected'"; }
+                          echo "<option ".$selectedM." value=".urlencode($file).">".$file . "</option>";
+                        }
                       }
-                    }
-                    ?>
-                    </select>
+                      ?>
+                      </select>
+                    </div>
+                    <div class="col-5 col-sm"> <input type="submit" name="selectMacro" value="Seleziona"> </div>
                   </div>
-                  <div class="col-5 col-sm"> <input type="submit" name="selectMacro" value="Seleziona"> </div>
                 </div>
               </div>
             </div>
             <?php if ($changeMacro) { ?>
-            <div class="row gap">
-              <div class="col-12 col-sm-4 line_height_40">File:</div> 
-              <div class="col-12 col-sm-8">
-                <input id="userfile" name="userfile" type="file" />
-                <label for="userfile">Seleziona un file</label>
+            <div class ="<?=$hideClass?>">
+              <div class="row gap">
+                <div class="col-12 col-sm-4 line_height_40">File:</div> 
+                <div class="col-12 col-sm-8">
+                  <input id="userfile" name="userfile" type="file" />
+                  <label for="userfile">Seleziona un file</label>
+                </div>
               </div>
-            </div>
-            <div class="row gap">
-              <div class="col-12 col-sm-4 line_height_40">Selezionare gioco:</div>
-              <div class="col-12 col-sm-8">
-                <select name="dir">'
+              <div class="row gap">
+                <div class="col-12 col-sm-4 line_height_40">Selezionare gioco:</div>
+                <div class="col-12 col-sm-8">
+                  <select name="dir" class="gameSelector">
 
-                <?php
-                  chdir('categories');
-                  chdir(urldecode($changeMacro));
-                  $dir = getcwd();
-                  $files = scandir($dir.'/');
-                  foreach($files as $file) {
-                    if (is_dir($file) && $file != '.' && $file!='..') {
-                      echo "<option value=".urlencode($file).">".$file . "</option>";
+                  <?php
+                    if(is_dir('categories')) chdir('categories');
+                    chdir(urldecode($changeMacro));
+                    $dir = getcwd();
+                    $files = scandir($dir.'/');
+                    foreach($files as $file) {
+                      if (is_dir($file) && $file != '.' && $file!='..') {
+                        echo "<option value=".urlencode($file).">".$file . "</option>";
+                      }
                     }
-                  }
-                  echo '<option value="other">Nuovo Gioco</option>';
-                ?>
-                </select>
+                    echo '<option value="other">Nuovo Gioco</option>';
+                  ?>
+                  </select>
+                </div>
               </div>
-            </div>
 
-            <div class="row gap">
-              <div class="col-12 col-sm-4 line_height_40">Nome nuovo gioco: </div>
-              <div class="col-12 col-sm-8"> <input type="text" name="newFolder" placeholder="Nuovo Gioco"/> </div>
-            </div>
-            <div class="row gap">
-              <div class="col-12 col-sm-4 line_height_40">Copertina gioco:</div> 
-              <div class="col-12 col-sm-8">
-                <input id="folderfile" name="folderfile" type="file" />
-                <label for="folderfile">Seleziona un file</label>
+              <div id="newGameInfo" class="hide">
+                <div class="row gap">
+                  <div class="col-12 col-sm-4 line_height_40">Nome nuovo gioco: </div>
+                  <div class="col-12 col-sm-8"> <input type="text" name="newFolder" placeholder="Nuovo Gioco"/> </div>
+                </div>
+                <div class="row gap">
+                  <div class="col-12 col-sm-4 line_height_40">Copertina gioco:</div> 
+                  <div class="col-12 col-sm-8">
+                    <input id="folderfile" name="folderfile" type="file" />
+                    <label for="folderfile">Seleziona un file</label>
+                  </div>
+                </div>
+                <div class="row gap">
+                  <div class="col-12 col-sm-4 line_height_40">Titolo Descrizione: </div>
+                  <div class="col-12 col-sm-8"> <input type="text" name="descTitle" value="" placeholder="Titolo"> </div>
+                </div>
+                <div class="row gap">
+                  <div class="col-12 col-sm-4"> Descrizione: </div>
+                  <div class="col-12 col-sm-8"> <textarea name="description" rows="8" cols="80"></textarea> </div>
+                </div>
               </div>
-            </div>
-            <div class="row gap">
-              <div class="col-12 col-sm-4 line_height_40">Titolo Descrizione: </div>
-              <div class="col-12 col-sm-8"> <input type="text" name="descTitle" value="" placeholder="Titolo"> </div>
-            </div>
-            <div class="row gap">
-            <div class="col-12 col-sm-4"> Descrizione: </div>
-            <div class="col-12 col-sm-8"> <textarea name="description" rows="8" cols="80"></textarea> </div>
             </div>
 
             <?php if (isset($_SESSION['already_exist']) && $_SESSION['already_exist']) {  ?>
@@ -170,10 +176,11 @@
           </form>
         <?php
         }else {
-          echo "no bravo";
+          header('location:access');
         }
       echo "</div>";
       include('templates/footer.php');
     ?>
+    <script type="text/javascript" src="static/js/uploader.js?update=1"></script>
   </body>
 </html>

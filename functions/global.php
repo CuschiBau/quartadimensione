@@ -9,7 +9,7 @@
 
   function sortFiles($files){
     usort($files, function($a, $b) {
-      return filemtime($a) < filemtime($b);
+      return filectime($a) < filectime($b);
     });
 
     return $files;

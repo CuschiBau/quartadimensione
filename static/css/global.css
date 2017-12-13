@@ -43,7 +43,10 @@ ul.group{
 }
 .top_header .row{ align-items: center }
 .top_header > div{ background-color: rgba(256,256,256,0.8)}
-.menu_icon_cont{ cursor: pointer; }
+.menu_icon_cont{ 
+  cursor: pointer; 
+  padding-left: 25px;
+}
 .menu_icon_cont img{
   width: 30px;
   height: 30px;

@@ -73,26 +73,28 @@
     }
   }
 
-  function updateFileName($changeMacro,$location){
+  function updateFileName($changeMacro,$location,$value){
     chdir('../..');
     $src = 'temp/keep.*';
     $temp = glob ($src);
     if (count($temp) > 0) {
       $tExt = explode('.',$temp[0])[1];
       $folderD = $_SESSION['tmp_cat'] ?? '';
-      if ($folderD == '') {
-        $_SESSION['empty_tmp_cat'] = true;
+      $filePath = $location == 'fanta' ? $location.'/'.$folderD.'/' : $location.'/'.urldecode($changeMacro).'/'.$folderD.'/';
+      $filePath = $filePath.$_POST['newName'].'.'.$tExt;
+      if(file_exists($filePath)){
+        saveInTemp($value,$tExt);
       }else{
-        if ($location == 'fanta') {
-          rename($temp[0],$location.'/'.$folderD.'/'.$_POST['newName'].'.'.$tExt);
-        }else {
-          rename($temp[0],$location.'/'.urldecode($changeMacro).'/'.$folderD.'/'.$_POST['newName'].'.'.$tExt);
+        if ($folderD == '') {
+          $_SESSION['empty_tmp_cat'] = true;
+        }else{
+          rename($temp[0],$filePath);
         }
+        chdir('categories');
+        $uploadfile = urldecode($changeMacro).'/'.$folderD.'/'.$_POST['newName'].'.'.$tExt;
+        if (isset($_SESSION['write_feed']) && $_SESSION['write_feed']) { writeFeed($uploadfile,null); }
+        $_SESSION['upload_success'] = true;
       }
-      chdir('categories');
-      $uploadfile = urldecode($changeMacro).'/'.$folderD.'/'.$_POST['newName'].'.'.$tExt;
-      if (isset($_SESSION['write_feed']) && $_SESSION['write_feed']) { writeFeed($uploadfile,null); }
-      $_SESSION['upload_success'] = true;
     }
   }
 

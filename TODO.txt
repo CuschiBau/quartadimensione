@@ -1,6 +1,6 @@
 # Aggiungere controlli sicurezza su tutti gli uploader
 # Caricando un file con lo stesso nome di uno già caricato, rimettere lo stesso nome dopo l'errore implementare nuovamente controllo
-# RIVEDERE HOMEFEED - da spostare fuori e/o da variabilizzare se arriviamo da categories o fanta
+# Files Icons
 
 // header("Content-Type: application/octet-stream");
     // header("Content-Transfer-Encoding: Binary");

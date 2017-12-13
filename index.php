@@ -67,7 +67,8 @@
                           <div class="card_ext"> <?=$fileExt?> </div>
                           <div class="card_text">
                           <div class="card_fileName"><a href="<?=$startingF?><?=$macro?>/<?=$folder?>/<?=$file?>"><?=$fileName?></a></div>
-                          <div class="card_category"> Caricato in <span class="card_label"><a href="reader?macro=<?=$macro?>&folder=<?=$folder?>"><?=$folder?></a><span> </div>
+                          <?php $catLink = $startingF != 'categories/' ? 'fantacalcio?lega='.$folder : 'reader?macro='.$macro.'&folder='.$folder ?>
+                          <div class="card_category"> Caricato in <span class="card_label"><a href="<?=$catLink?>"><?=$folder?></a><span> </div>
                           </div>
                         </div>
                       </div>

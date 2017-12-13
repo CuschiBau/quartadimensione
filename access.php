@@ -61,18 +61,16 @@
 
               <h1 class="main_title">Admin Login</h1>
 
+              <?php
+                if ($error) { echo "<div class='error_msg'>Errore. Riprovare.</div>"; }
+              ?>
+
               <form id="login" action="access" method="post">
-                  <div class="row">
-                    <div class="col-12 col-sm-4 gap"> <input id="username" name="username" type="text" placeholder="Username" autofocus required> </div>
-                    <div class="col-12 col-sm-4 gap"> <input id="password" name="password" type="password" placeholder="Password" required> </div>
-                    <div class="col-12 col-sm-4 gap m100"> <input type="submit" id="submit" name="login" value="Accedi"> </div>
-                  </div>
-                  
-                  <?php
-                  if ($error) {
-                    echo "<div>Errore. Riprovare.</div>";
-                  }
-                  ?>
+                <div class="row">
+                  <div class="col-12 col-sm-4 gap"> <input id="username" name="username" type="text" placeholder="Username" autofocus required> </div>
+                  <div class="col-12 col-sm-4 gap"> <input id="password" name="password" type="password" placeholder="Password" required> </div>
+                  <div class="col-12 col-sm-4 gap m100"> <input type="submit" id="submit" name="login" value="Accedi"> </div>
+                </div>
               </form>
             </div>
             <?php

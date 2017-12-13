@@ -39,7 +39,7 @@
 
           echo "<p>";
           if ($newName){
-            updateFileName($changeMacro,'categories');
+            updateFileName($changeMacro,'categories',$value);
           } else if (file_exists($uploadfile)) {
             saveInTemp($value,$ext);
           } else if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {

@@ -17,7 +17,10 @@
 
       chdir('fanta');
       $remove = $_POST['removeFile'] ?? '';
-      $cUrl = returnURL();
+      $getFolder = $_GET['lega'] ?? '';
+      $changeMacro = $_POST['macro'] ?? '';        
+      if($changeMacro == '') $changeMacro = $getFolder;
+      $cUrl = returnURL().'?lega='.$changeMacro;
       if (isset($_SESSION["autorizzato"]) && $remove){ 
         $removeLeague = urldecode(explode('|',$remove)[0]);
         $removeFile = explode('|',$remove)[1];
@@ -29,7 +32,7 @@
       echo "<div class='container' id='main_cont'>";
         echo "<h1 class='main_title'>Fantacalcio</h1>";
         $return = $_POST['fileUpload'] ?? '';
-        $changeMacro = $_POST['macro'] ?? '';        
+        
         if ($return) {
           chdir('fanta');
           if($changeMacro != 'other') chdir(urldecode($changeMacro));
@@ -68,7 +71,7 @@
         }
         
       ?>
-        <form enctype="multipart/form-data" action="fantacalcio" method="POST">
+        <form enctype="multipart/form-data" action="fantacalcio?lega=<?=$changeMacro?>" method="POST">
           <input type="hidden" name="MAX_FILE_SIZE" value="10000000000" />
           <?php $hideClassI = isset($_SESSION['already_exist']) && $_SESSION['already_exist'] ? 'hide' : '' ?>
           <div class="gap <?=$hideClassI?>">        

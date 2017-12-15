@@ -64,7 +64,7 @@
                           ?>
                         
                         <div class="card_infos">
-                          <div class="card_ext"> <?=$fileExt?> </div>
+                          <div class="card_ext"> <img src="static/images/<?=$fileExt?>.png" alt="<?=$fileExt?>"/> </div>
                           <div class="card_text">
                           <div class="card_fileName"><a href="<?=$startingF?><?=$macro?>/<?=$folder?>/<?=$file?>"><?=$fileName?></a></div>
                           <?php $catLink = $startingF != 'categories/' ? 'fantacalcio?lega='.$folder : 'reader?macro='.$macro.'&folder='.$folder ?>
@@ -115,12 +115,12 @@
                 </div>
                 <div class="text_right">
                   <a href="https://www.google.it/maps/place/Quarta+Dimensione/@46.0716838,13.2310544,17z/data=!4m12!1m6!3m5!1s0x477a355f02cccdc5:0x6d9f7709b20a53e7!2sQuarta+Dimensione!8m2!3d46.0716801!4d13.2332485!3m4!1s0x477a355f02cccdc5:0x6d9f7709b20a53e7!8m2!3d46.0716801!4d13.2332485?hl=en" target="_blank">
-                    <span>Apri in Maps</span>
-                    <img src="static/images/directions.png" alt="" aria-hidden="true">
+                    <span class="direction_text">Apri in Maps</span>
+                    <img src="static/images/directions.png" class="direction_img" alt="" aria-hidden="true">
                   </a>
                 </div>
                 <div class="orari">
-                  <img src="static/images/time.png" alt="" aria-hidden="true">
+                  <img src="static/images/clock.png" alt="" aria-hidden="true">
                   <span>ORARI</span>
                 </div>
               </div>
@@ -152,7 +152,7 @@
                 </div>
                 <div class="gap">
                   <a href="mailto:info@quarta-dimensione.net">
-                    <img src="static/images/email.png" alt="Manda email">
+                    <img src="static/images/mail.png" alt="Manda email">
                     <span>info@quarta-dimensione.net</span>
                   </a>
                 </div>
@@ -205,12 +205,12 @@
                     </div>
                     <div class="text_right">
                       <a href="https://www.google.it/maps/place/Quarta+Dimensione/@46.0716838,13.2310544,17z/data=!4m12!1m6!3m5!1s0x477a355f02cccdc5:0x6d9f7709b20a53e7!2sQuarta+Dimensione!8m2!3d46.0716801!4d13.2332485!3m4!1s0x477a355f02cccdc5:0x6d9f7709b20a53e7!8m2!3d46.0716801!4d13.2332485?hl=en" target="_blank">
-                        <span>Apri in Maps</span>
-                        <img src="static/images/directions.png" alt="" aria-hidden="true">
+                        <span class="direction_text">Apri in Maps</span>
+                        <img src="static/images/directions.png" class="direction_img" alt="" aria-hidden="true">
                       </a>
                     </div>
                     <div class="orari mobile">
-                      <img src="static/images/time.png" alt="" aria-hidden="true">
+                      <img src="static/images/clock.png" alt="" aria-hidden="true">
                       <span>ORARI</span>
                     </div>
                   </div>
@@ -250,7 +250,7 @@
                   </div>
                   <div class="gap">
                     <a href="mailto:info@quarta-dimensione.net">
-                      <img src="static/images/email.png" alt="Manda email">
+                      <img src="static/images/mail.png" alt="Manda email">
                       <span>info@quarta-dimensione.net</span>
                     </a>
                   </div>

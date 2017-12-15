@@ -4,6 +4,10 @@
     padding: 20px 0px;
 }
 
+.slick-current .card {
+    min-width: 400px;
+}
+
 .card {
     border-radius: 3px;
     background: #fff;
@@ -46,6 +50,15 @@
 .card_ext, .card_text {
     display: table-cell;
     color: #686868;
+    vertical-align: middle;
+}
+
+.card_text {
+    padding-left: 15px;
+}
+
+.card_ext img {
+    width: 30px;
 }
 
 .card_fileName {
@@ -63,12 +76,16 @@
 
 .card_label {
     border: 1px solid #686868;
-    padding: 0px 5px;
+    padding: 0px 5px 3px 5px;
     display: inline-block;
     border-top-left-radius: 40px;
     border-bottom-left-radius: 40px;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
+}
+
+.card_label a {
+    color: #686868;
 }
 
 .card_label::before {
@@ -86,6 +103,10 @@
 .blue_text{ color: #0F4557; }
 .green_text{ color: green; } 
 
+.direction_text {
+    font-size: 0.9rem;
+}
+
 /* HOME BLOCKS DESKTOP */
 @media (min-width: 768px) {
     .mobile_view{ display: none !important; }
@@ -97,7 +118,7 @@
     }
 
     .box_content{
-        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.25);
         margin-bottom: 20px;
     }
     .left_box{
@@ -149,6 +170,10 @@
         height: 35px;
         margin-right: 10px;
     }
+    .dove_siamo .right_box img.direction_img {
+    width: 20px;
+    height: 20px;
+}
     .dove_siamo .right_box .text_right{
         padding: 20px 0px 10px 0px;
         border-bottom: 1px solid #CCC;

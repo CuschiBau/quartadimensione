@@ -73,6 +73,11 @@
     max-height: 100%;
 }
 
+.file_list img {
+    width: 25px;
+    margin: 5px;
+}
+
 @media (max-width: 768px) {
     .edit_link.image{ 
         right: 5px; 

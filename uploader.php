@@ -8,8 +8,8 @@
   </head>
   <body>
     <?php
-      include('functions\global.php');
-      include('functions\uploaderFunctions.php');
+      include('functions/global.php');
+      include('functions/uploaderFunctions.php');
       include('templates/header.html');
       session_start();
       echo "<div class='container' id='main_cont'>";

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Categorie</title>
     <?=include('templates/mainStyle.php')?>
-    <link rel="stylesheet" type="text/css" href="static/css/game.css?update=6"/>
+    <link rel="stylesheet" type="text/css" href="static/css/game.css?update=8"/>
   </head>
   <body>
     <?php
@@ -82,7 +82,7 @@
                     <form class="" action="<?=$cUrl?>" method="post">
                       <div class="row">
                         <div class="col-8">
-                          <input type="text" name="newTitle" value="<?=$title?>">
+                          <input type="text" name="newTitle" value="<?=$title?>" class="title_field">
                         </div>
                         <div class="col-4">
                           <input type="submit" name="submit" value="Modifica" />
@@ -91,7 +91,7 @@
                     </form>
                     <?php
                   } else {
-                    echo "<h1>".$title."</h1>";
+                    echo "<h1 class='game_title'>".$title."</h1>";
                   }
                 }else if ($uTitle && isset($_SESSION["autorizzato"])) {
                   ?>

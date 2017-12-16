@@ -4,8 +4,25 @@
     padding: 20px 0px;
 }
 
+/* .slick-slide {
+     display: inline-block;
+    vertical-align: middle;
+    float:none;
+} */
+
 .slick-current .card {
-    min-width: 400px;
+    min-width: 450px;
+}
+
+.slick-current .card .img_cont {
+    min-height: 250px;
+}
+
+.slick-slide {
+    margin-top: 27px;
+}
+.slick-slide.slick-current  {
+    margin-top: 0px;
 }
 
 .card {
@@ -20,21 +37,13 @@
     border-radius: 3px;
     overflow: hidden;
     min-height: 195px;
-    width: 100%;
     position: relative;
     display: inline-block;
     height: 100%;
     vertical-align: middle;
-    background-size: 100%;
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
-
-
-.card .img_cont img {
-    position: absolute;
-    width: 100%;
-    vertical-align: middle;
 }
 
 .cards_title {

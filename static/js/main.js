@@ -13,4 +13,8 @@ $(document).ready(function () {
         else $('.menu-gradient').css('top',$('.top_header').height()+'px')
     })
 
+    if( $(".gallery_item").length < 1) {
+        $(".gallery_cont").hide()
+    }
+
 })

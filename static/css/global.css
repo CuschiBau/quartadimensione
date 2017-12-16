@@ -17,6 +17,7 @@ body{
   padding: 0px;
   margin: 0px;
   color: #686868;
+  overflow-x: hidden;
 }
 
 .group{
@@ -167,8 +168,8 @@ ul.group{
   text-transform: uppercase;
   font-size: 25px;
   font-weight: bold;
-  padding-top: 10px;
-  padding-bottom: 15px;
+  padding-top: 40px;
+  padding-bottom: 25px;
 }
 
 .text_center{ text-align: center}
@@ -187,6 +188,8 @@ input[type="text"],input[type="password"],select{
   height: 38px;
   width: 100%;
   background: #FFF;
+   -webkit-appearance: none;
+   -moz-appearance: none;
 }
 input[type="submit"],button{
   border: 0px;

@@ -13,7 +13,7 @@
     <div class="">
 
       <?php
-
+$_SESSION["autorizzato"] = true;
           include('templates/header.html');
           chdir('categories');
           echo "<div id='main_cont'>";

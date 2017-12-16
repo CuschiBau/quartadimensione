@@ -4,6 +4,11 @@
     position: relative;
 }
 .game_logo img{ max-width: 100%; }
+.game_title{ font-size: 40px; }
+.title_field{ 
+    font-size: 40px;
+    height: 60px !important; 
+}
 .edit_link.image{
     position: absolute;
     right: calc(40% - 200px);
@@ -25,6 +30,10 @@
 .files_title, .gallery_title{
     padding-top: 20px;
     font-size: 20px;
+}
+.title_cont{ padding-bottom: 20px; }
+.title_cont .row{
+    align-items: baseline;
 }
 .logged_user .title_cont,.logged_user .gallery_cont{ 
     position: relative;

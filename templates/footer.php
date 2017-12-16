@@ -9,7 +9,7 @@
             <a target="_blank" href="https://www.facebook.com/quarta.dimensione.50/"><img src="static/images/fb.png" alt="Facebook link"></a>
           </span>
           <span>
-            <a href="mailto:info@quarta-dimensione.net"><img src="static/images/email.png" alt="Manda email"></a>
+            <a href="mailto:info@quarta-dimensione.net"><img src="static/images/mail.png" alt="Manda email"></a>
           </span>
           <span>
             <a href="tel:0432477575"><img src="static/images/phone.png" alt="Chiama"></a>

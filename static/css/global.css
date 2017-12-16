@@ -16,6 +16,7 @@ body{
   font-family: 'Bree', serif, monospace;
   padding: 0px;
   margin: 0px;
+  color: #686868;
 }
 
 .group{
@@ -91,7 +92,8 @@ ul.group{
 .fanta_icon,
 .bb_icon,
 .cat_icon,
-.bar_icon{
+.bar_icon,
+.war_icon{
   padding: 5px 0px;
   padding-left: 30px;
   display: inline-block;
@@ -110,6 +112,10 @@ ul.group{
 }
 .cat_icon{
   background: url('../images/dice.png') no-repeat left center;
+  background-size: 20px 20px;
+}
+.war_icon {
+  background: url('../images/war.png') no-repeat left center;
   background-size: 20px 20px;
 }
 .bar_icon{
@@ -135,7 +141,6 @@ ul.group{
 }
 .social-icons a{
   display: inline-block;
-  border-radius: 8px;
   overflow: hidden;
 }
 .social-icons img{

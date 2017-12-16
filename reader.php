@@ -157,7 +157,7 @@
                       <li>
                         <div class="row">
                           <div class="col-10">
-                            <span><?=$ext?></span>
+                            <span><img src="static/images/<?=$ext?>.png" alt="<?=$ext?>"/></span>
                             <a href="categories/<?=$macro?>/<?=$folder?>/<?=$file?>"><?=$file?></a>
                           </div>
                           <div class="col-2 text-right">

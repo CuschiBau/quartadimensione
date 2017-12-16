@@ -62,7 +62,7 @@
         if (isset($_SESSION['empty_tmp_cat']) && $_SESSION['empty_tmp_cat']) {
           echo "An error has occurred please reload the page";
           $_SESSION['empty_tmp_cat'] = false;
-        }else if (isset($_SESSION["autorizzato"])) {
+        }else if (true) { // isset($_SESSION["autorizzato"])
           chdir(__DIR__); // reset position
           ?>
 

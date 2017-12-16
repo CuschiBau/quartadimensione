@@ -196,7 +196,7 @@
     }
     .close_times{
         background: url('../images/leftC.png') no-repeat left center;
-        background-size: 20px 20px;
+        background-size: 13px 13px;
         cursor: pointer;
         padding: 10px;
         padding-left: 30px;
@@ -346,4 +346,11 @@
 .dove_siamo .address_body .text_right{
     padding: 20px 0px 10px 0px;
     border-bottom: 1px solid #CCC;
+}
+
+
+@media (max-width: 991px) {
+    .desktop_view{ 
+        max-width: 100%;  
+    }
 }

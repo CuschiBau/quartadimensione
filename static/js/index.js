@@ -3,6 +3,7 @@ $(document).ready(function () {
     variableWidth: true,
     infinite: false,
     slidesToShow: 1,
+    focusOnSelect: true,
     slidesToScroll: 1,
     initialSlide: 2,
     arrows: false,

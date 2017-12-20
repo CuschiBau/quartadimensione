@@ -363,3 +363,35 @@
         max-width: 100%;  
     }
 }
+
+@media (max-width: 480px) {
+    .card {
+        border-radius: 3px;
+        background: #fff;
+        margin: 5px;
+        min-width: 280px;
+        border: 0px;
+    }
+
+    .card .img_cont {
+        border-radius: 3px;
+        overflow: hidden;
+        min-height: 100px;
+        position: relative;
+        display: inline-block;
+        height: 100%;
+        vertical-align: middle;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    .slick-current .card {
+        min-width: 300px;
+    }
+
+
+    .slick-current .card .img_cont {
+        min-height: 150px;
+    }
+}
+

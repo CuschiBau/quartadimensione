@@ -79,6 +79,7 @@ ul.group{
 .menu li{
   text-align: center;
   padding: 10px 0px;
+  font-size: 0.9rem;
 }
 .menu li a, .menu li a:visited{
   color: #FFF;

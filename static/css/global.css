@@ -190,6 +190,7 @@ input[type="text"],input[type="password"],select{
   background: #FFF;
    -webkit-appearance: none;
    -moz-appearance: none;
+   border-radius: 0px;
 }
 input[type="submit"],button{
   border: 0px;

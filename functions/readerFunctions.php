@@ -39,7 +39,30 @@
   }
 
   function removeFile($url,$file){
-    if(file_exists($file)) unlink($file);
+    if(file_exists($file)) {
+      unlink($file);
+      $path = explode('\\',getcwd());
+      $path = $path[sizeof($path) - 2 ] . '/' . $path[sizeof($path) - 1 ] . '/' . $file;
+      chdir(__DIR__);
+      chdir('..');      
+      chdir('categories');
+      $myfile = fopen("homefeed.txt","r");
+      $home = [];
+
+      while(! feof($myfile)) { $home[] = fgets($myfile); }
+
+      fclose($myfile);
+      $newHome = '';
+      for($i = 0 ; $i < sizeof($home) ; $i++ ){
+        if(trim($home[$i]) != trim($path)) {  
+          $newHome = $newHome.trim($home[$i]);
+          $newHome = $newHome."\n";
+        } ;
+      }
+      $myfile = fopen("homefeed.txt","w");
+      fwrite($myfile, $newHome);
+      fclose($myfile);
+    }
     header('Location:'.$url);
   }
 

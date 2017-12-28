@@ -1,80 +1,81 @@
 <menu>
     <sezione data-name="panini">
         <elemento>
-            <nome>Panino 1</nome>
-            <prezzo>€ 4.50</prezzo>
-            <ingredienti>A, B, C</ingredienti>
+            <nome>Hamburger</nome>
+            <prezzo>€ 6.00</prezzo>
+            <ingredienti>Hamburger, Cipolla, Pomodorp, Cetriolo, Insalata, Salse, Formaggio</ingredienti>
         </elemento>
         <elemento>
-            <nome>Panino 3</nome>
-            <prezzo>€ 10.50</prezzo>
-            <ingredienti>A, D, B</ingredienti>
+            <nome>Vegetaburger</nome>
+            <prezzo>€ 6.00</prezzo>
+            <ingredienti>Hamburger Vegetale, Cipolla, Pomodoro, Insalata, Salse, Formaggio</ingredienti>
         </elemento>
         <elemento>
-            <nome>Panino 3</nome>
-            <prezzo>€ 20.50</prezzo>
-            <ingredienti>A, B, C</ingredienti>
+            <nome>Piggy</nome>
+            <prezzo>€ 6.00</prezzo>
+            <ingredienti>Salsiccia, Cipolla, Pomodoro, Peperone, Maionese, Pepe</ingredienti>
         </elemento>
         <elemento>
-            <nome>Panino 4</nome>
-            <prezzo>€ 14.50</prezzo>
-            <ingredienti>A, D,2 23</ingredienti>
+            <nome>Kit Carson</nome>
+            <prezzo>€ 6.00</prezzo>
+            <ingredienti>Prosciutto Cotto, Pomodoro, Mozzarella, Salsa Rosa</ingredienti>
         </elemento>
         <elemento>
-            <nome>Panino 5</nome>
-            <prezzo>€ 233.50</prezzo>
-            <ingredienti>Aasdasd</ingredienti>
+            <nome>Sampei</nome>
+            <prezzo>€ 6.00</prezzo>
+            <ingredienti>Tonno, Formaggio, Salsa Rosa, Insalata</ingredienti>
         </elemento>
+        <elemento>
+            <nome>Hot Dog</nome>
+            <prezzo>€ 5.00</prezzo>
+            <ingredienti>Wurstel, Cipolla, Ketchup, Maionese</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Tex</nome>
+            <prezzo>€ 5.00</prezzo>
+            <ingredienti>Cotoletta, Maionese, Pomodoro, Pepe, Insalata</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Arcadia</nome>
+            <prezzo>€ 5.00</prezzo>
+            <ingredienti>Salame Ungherese, Formaggio, Maionese</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Thor</nome>
+            <prezzo>€ 5.00</prezzo>
+            <ingredienti>Salamino Piccante, Funghi, Formaggio, Tabasco</ingredienti>
+        </elemento>        
     </sezione>
     <sezione data-name="bevande">
         <elemento>
-            <nome>Bevanda 1</nome>
-            <prezzo>€ 230.50</prezzo>
-            <ingredienti>No</ingredienti>
+            <nome>Acqua Naturale / Frizzante 0.5lt</nome>
+            <prezzo>€ 1.50</prezzo>
+            <ingredienti></ingredienti>
         </elemento>
         <elemento>
-            <nome>Bevanda 2</nome>
-            <prezzo>€ 230.50</prezzo>
-            <ingredienti>No</ingredienti>
+            <nome>Coca Cola alla Spina 0.25lt</nome>
+            <prezzo>€ 2.50</prezzo>
+            <ingredienti></ingredienti>
         </elemento>
         <elemento>
-            <nome>Bevanda 1</nome>
-            <prezzo>€ 230.50</prezzo>
-            <ingredienti>No</ingredienti>
+            <nome>Coca Cola alla Spina 0.50lt</nome>
+            <prezzo>€ 4.00</prezzo>
+            <ingredienti></ingredienti>
         </elemento>
         <elemento>
-            <nome>Bevanda 2</nome>
-            <prezzo>€ 230.50</prezzo>
-            <ingredienti>No</ingredienti>
+            <nome>Sciroppi 0.30lt</nome>
+            <prezzo>€ 2.00</prezzo>
+            <ingredienti></ingredienti>
         </elemento>
         <elemento>
-            <nome>Bevanda 1</nome>
-            <prezzo>€ 230.50</prezzo>
-            <ingredienti>No</ingredienti>
+            <nome>Sciroppi 0.50lt</nome>
+            <prezzo>€ 3.00</prezzo>
+            <ingredienti></ingredienti>
         </elemento>
         <elemento>
-            <nome>Bevanda 2</nome>
-            <prezzo>€ 230.50</prezzo>
-            <ingredienti>No</ingredienti>
-        </elemento><elemento>
-            <nome>Bevanda 1</nome>
-            <prezzo>€ 230.50</prezzo>
-            <ingredienti>No</ingredienti>
-        </elemento>
-        <elemento>
-            <nome>Bevanda 2</nome>
-            <prezzo>€ 230.50</prezzo>
-            <ingredienti>No</ingredienti>
-        </elemento>
-        <elemento>
-            <nome>Bevanda 1</nome>
-            <prezzo>€ 230.50</prezzo>
-            <ingredienti>No</ingredienti>
-        </elemento>
-        <elemento>
-            <nome>Bevanda 2</nome>
-            <prezzo>€ 230.50</prezzo>
-            <ingredienti>No</ingredienti>
+            <nome>Sciroppi 0.30lt</nome>
+            <prezzo>€ 2.00</prezzo>
+            <ingredienti></ingredienti>
         </elemento>
     </sezione>
     <sezione data-name="snacks">

@@ -16,8 +16,9 @@
           $error = false;
           $submitted = $_POST['login'] ?? '';
           if ($submitted) {
-            $connessione = mysqli_connect('localhost','root','');
-            $database = mysqli_select_db($connessione,'dim');
+            $config = include('config/config.php');
+            $connessione = mysqli_connect($config['host'],$config['username'],$config['psw']);
+            $database = mysqli_select_db($connessione,$config['dbname']);
             //variabili POST con anti sql Injection
             $value = $_POST['username'] ?? '';
             $valueP = $_POST['password'] ?? '';
@@ -49,7 +50,7 @@
               $_SESSION['already_exist'] = false;
               $_SESSION['write_feed'] = false;
              /*Redirect alla pagina riservata*/
-               header('Location: uploader');
+               header('Location: uploader.php');
 
               } else {
                 /*Username e password errati, redirect alla pagina di login*/
@@ -65,7 +66,7 @@
                 if ($error) { echo "<div class='error_msg'>Errore. Riprovare.</div>"; }
               ?>
 
-              <form id="login" action="access" method="post">
+              <form id="login" action="access.php" method="post">
                 <div class="row">
                   <div class="col-12 col-sm-4 gap"> <input id="username" name="username" type="text" placeholder="Username" autofocus required> </div>
                   <div class="col-12 col-sm-4 gap"> <input id="password" name="password" type="password" placeholder="Password" required> </div>

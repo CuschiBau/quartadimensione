@@ -16,24 +16,24 @@
           </span>
         </div>
         <div class="col-12 col-sm-6 text-center footer_menu">
-          <span class="align-middle"><a href="index"><span>HOME |</span></a></span>
-          <span class="align-middle"><a href="fantacalcio"><span>FANTACALCIO |</span></a></span>
-          <span class="align-middle"><a href="bbleague"><span>BLOOD BOWL |</span></a></span>
-          <span class="align-middle"><a href="macro"><span>ALTRI GIOCHI |</span></a></span>
-          <span class="align-middle"><a href="barlist"><span>FOOD &amp; DRINKS</span></a></span>
+          <span class="align-middle"><a href="index.php"><span>HOME |</span></a></span>
+          <span class="align-middle"><a href="fantacalcio.php"><span>FANTACALCIO |</span></a></span>
+          <span class="align-middle"><a href="http://www.ludolandia.it/bbleague/"><span>BLOOD BOWL |</span></a></span>
+          <span class="align-middle"><a href="macro.php"><span>ALTRI GIOCHI |</span></a></span>
+          <span class="align-middle"><a href="barlist.php"><span>FOOD &amp; DRINKS</span></a></span>
         </div>
         <div class="col-12 col-sm-3 admin_links">
         <?php
         if (isset($_SESSION["autorizzato"])) {
           ?>
             <div class="login_icon gap">
-              <a href="uploader">
+              <a href="uploader.php">
                 <img src="static/images/upload.png" alt="Upload Files">
                 <span>UPLOAD FILES</span>                
               </a>
             </div>   
             <div class="login_icon">
-              <a href="logout">
+              <a href="logout.php">
                 <img src="static/images/user.png" alt="Login">
                 <span>LOGOUT</span>                
               </a>
@@ -42,7 +42,7 @@
         }else{
           ?>
             <div class="login_icon">
-              <a href="access">
+              <a href="access.php">
                 <img src="static/images/user.png" alt="Login">
                 <span>ADMIN LOGIN</span>                
               </a>
@@ -59,6 +59,8 @@
   <script type="text/javascript" src="static/js/jquery-3.2.1.js"></script>
   <script type="text/javascript" src="static/js/main.js?p=6"></script>
 </div>
+
+<!-- Design and Development by Mattia Cibau and Salvatore Mauceri -->
 
 <?php
   return '';

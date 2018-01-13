@@ -9,4 +9,7 @@ $(document).ready(function () {
         $('.changeLeagueBtn').click();
     })
 
+    if($('.gameSelector option').length == 1){ $('#newGameInfo').removeClass('hide') }
+    if($('#changeLeague option').length == 1 && window.location.href.indexOf('lega=') == -1){ $('.changeLeagueBtn').click(); }    
+
 })

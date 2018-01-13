@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title><?=$_GET['macro'] ?? 'Categoria'?></title>
     <?=include('templates/mainStyle.php')?>
     <link rel="stylesheet" href="static/css/categories.css?a=2">
   </head>
@@ -35,13 +35,13 @@
                   echo "<div class='game_item col-12 col-md-3 col-sm-6'>";
                   if (count($result) > 0) {
                     ?>
-                      <a href="reader?macro=<?=$macro?>&folder=<?=$file?>" class="align-middle">
+                      <a href="reader.php?macro=<?=$macro?>&folder=<?=$file?>" class="align-middle">
                         <img src="categories/<?=$macro?>/<?=$result[0]?>" class="align-middle"/>
                       </a>
                     <?php
                   }else{
                     ?>
-                      <a href="reader?macro=<?=$macro?>&folder=<?=$file?>">
+                      <a href="reader.php?macro=<?=$macro?>&folder=<?=$file?>">
                         <div style="font-size:20px;color:red;"> <?=$file?> </div>
                       </a>
                     <?php

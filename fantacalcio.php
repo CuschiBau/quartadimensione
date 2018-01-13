@@ -62,7 +62,7 @@
               <div class="success_msg"> File caricato con successo </div>
             <?php
             $setHomepage = $_POST['sethomepage'] ?? '';
-            if ($setHomepage != '') { writeFeed($uploadfile,$value); }
+            if ($setHomepage != '') { writeFeed($uploadfile,$value,'fanta'); }
             $_SESSION['upload_success'] = true;
           } else {
             echo "<div class='error_msg'>Caricamento fallito</div>";
@@ -71,7 +71,7 @@
         }
         
       ?>
-        <form enctype="multipart/form-data" action="fantacalcio?lega=<?=$changeMacro?>" method="POST">
+        <form enctype="multipart/form-data" action="fantacalcio.php?lega=<?=$changeMacro?>" method="POST">
           <input type="hidden" name="MAX_FILE_SIZE" value="10000000000" />
           <?php $hideClassI = isset($_SESSION['already_exist']) && $_SESSION['already_exist'] ? 'hide' : '' ?>
           <div class="gap <?=$hideClassI?>">        

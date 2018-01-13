@@ -43,7 +43,10 @@ ul.group{
   background-size: 100%;
   background-repeat: no-repeat;
 }
-.top_header .row{ align-items: center }
+.top_header .row{ 
+  align-items: center;
+  margin: 0px; 
+}
 .top_header > div{ background-color: rgba(256,256,256,0.8)}
 .menu_icon_cont{ 
   cursor: pointer; 

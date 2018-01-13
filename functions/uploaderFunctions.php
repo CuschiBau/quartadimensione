@@ -1,17 +1,12 @@
 <?php
-  function writeFeed($uploadfile,$changeMacro) {
+  function writeFeed($uploadfile,$changeMacro,$cat) {
     $addFanta = '';
-    $place = explode('\\',getcwd());
-    if (end($place) != 'categories') {
-      chdir('..');
-    }
-    $place = explode('\\',getcwd());
-    if (end($place) == 'fanta') {
-      chdir('..');
-      chdir('categories');
-      $addFanta = 'fanta/';
-    }
 
+    if ($cat == 'fanta') { $addFanta = 'fanta/'; }
+    
+    chdir(__DIR__.'/..');
+    chdir('categories');
+    
     $myfile = fopen("homefeed.txt","r");
     $home = [];
 
@@ -92,7 +87,7 @@
         }
         chdir('categories');
         $uploadfile = urldecode($changeMacro).'/'.$folderD.'/'.$_POST['newName'].'.'.$tExt;
-        if (isset($_SESSION['write_feed']) && $_SESSION['write_feed']) { writeFeed($uploadfile,null); }
+        if (isset($_SESSION['write_feed']) && $_SESSION['write_feed']) { writeFeed($uploadfile,null,null); }
         $_SESSION['upload_success'] = true;
       }
     }

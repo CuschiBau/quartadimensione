@@ -45,7 +45,7 @@
           } else if (move_uploaded_file($_FILES['userfile']['tmp_name'], $uploadfile)) {
             $_SESSION['already_exist'] = false;
             $setHomepage = $_POST['sethomepage'] ?? '';
-            if ($setHomepage != '') { writeFeed($uploadfile,$changeMacro); }
+            if ($setHomepage != '') { writeFeed($uploadfile,$changeMacro,null); }
             $_SESSION['upload_success'] = true;
           } else {
             echo "Upload failed";

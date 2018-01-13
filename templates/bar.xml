@@ -45,6 +45,150 @@
             <prezzo>€ 5.00</prezzo>
             <ingredienti>Salamino Piccante, Funghi, Formaggio, Tabasco</ingredienti>
         </elemento>        
+        <elemento>
+            <subsection>Piadine</subsection>
+        </elemento>
+        <elemento>
+            <nome>Julia</nome>
+            <prezzo>€ 5.00</prezzo>
+            <ingredienti>Prosciutto, Mozzarella, Insalata</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Gea</nome>
+            <prezzo>€ 5.00</prezzo>
+            <ingredienti>Salame Ungherese, Mozzarella</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Legs</nome>
+            <prezzo>€ 5.00</prezzo>
+            <ingredienti>Salamino Piccante, Mozzarella</ingredienti>
+        </elemento> 
+    </sezione>
+    <sezione data-name="piatti caldi">
+        <elemento>
+            <nome>Special Mix</nome>
+            <prezzo>€ 9.00</prezzo>
+            <ingredienti>Patatine, Olive Ascolane, Polpette, Wurstel</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Osten Berliner</nome>
+            <prezzo>€ 9.00</prezzo>
+            <ingredienti>Patatine, Wurstel</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Total War</nome>
+            <prezzo>€ 9.00</prezzo>
+            <ingredienti>Hamburger, Cotoletta, Wurstel, Patatine</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Red Alert</nome>
+            <prezzo>€ 9.00</prezzo>
+            <ingredienti>Tre Hamburger, Formaggio, Ketchup, Patatine</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Willer</nome>
+            <prezzo>€ 7.00</prezzo>
+            <ingredienti>Cotoletta, Pomodori, Insalata, Olive, Cetriolo </ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Club Sandwich</nome>
+            <prezzo>€ 10.00</prezzo>
+            <ingredienti>Prosciutto, Formaggio, Pomodoro, Insalata, Pancetta, Patatine</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Patatas Bravas (consigliato per 2 persone)</nome>
+            <prezzo>€ 5.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Mozzarelline Impanate</nome>
+            <prezzo>€ 4.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Polpette di Manzo</nome>
+            <prezzo>€ 4.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Olive Ascolane</nome>
+            <prezzo>€ 4.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Panzerotti</nome>
+            <prezzo>€ 4.00</prezzo>
+        </elemento>
+        <elemento>
+            <subsection>Snack</subsection>
+        </elemento>
+        <elemento>
+            <nome>Tostone</nome>
+            <prezzo>€ 4.00</prezzo>
+            <ingredienti>Pane, Prosciutto, Formaggio, Salsa Rosa</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Tostone Farcito</nome>
+            <prezzo>€ 4.50</prezzo>
+            <ingredienti>Pane, Prosciutto, Formaggio, Funghi, Salsa Rosa</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Pizzetta / Tramezzino</nome>
+            <prezzo>€ 2.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Pop Corn</nome>
+            <prezzo>€ 3.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Patatine Fritte</nome>
+            <prezzo>€ 3.00</prezzo>
+        </elemento>
+    </sezione>
+    <sezione data-name="Piatti Freddi">
+        <elemento>
+            <subsection>Insalate</subsection>
+        </elemento>
+        <elemento>
+            <nome>Insalata Primavera</nome>
+            <prezzo>€ 7.50</prezzo>
+            <ingredienti>Lattuga, Pomodori, Mozzarella, Mais</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Insalata Estata</nome>
+            <prezzo>€ 7.00</prezzo>
+            <ingredienti>Lattuga, Pomodoro, Tonno, Olive</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Insalata Trinità</nome>
+            <prezzo>€ 7.00</prezzo>
+            <ingredienti>Lattuga, Pomodori, Tonno, Fagioli, Cipolla</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Caprese</nome>
+            <prezzo>€ 7.00</prezzo>
+            <ingredienti>Lattuga, Pomodori, Mozzarella, Olive, Origano</ingredienti>
+        </elemento>
+        <elemento>
+            <subsection>Gelati e Brioche</subsection>
+        </elemento>
+        <elemento>
+            <nome>Cornetto Algida</nome>
+            <prezzo>€ 2.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Magnum</nome>
+            <prezzo>€ 2.50</prezzo>
+            <ingredienti>(Classico / Bianco / Mandorle / Sandwich)</ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Cucciolone</nome>
+            <prezzo>€ 2.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Calippo</nome>
+            <prezzo>€ 2.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Brioche</nome>
+            <prezzo>€ 1.20</prezzo>
+        </elemento>
     </sezione>
     <sezione data-name="bevande">
         <elemento>
@@ -53,63 +197,287 @@
             <ingredienti></ingredienti>
         </elemento>
         <elemento>
-            <nome>Coca Cola alla Spina 0.25lt</nome>
-            <prezzo>€ 2.50</prezzo>
+            <nome>Coca Cola alla Spina 0.25lt/0.50lt</nome>
+            <prezzo>€ 2.50/4.00</prezzo>
             <ingredienti></ingredienti>
         </elemento>
         <elemento>
-            <nome>Coca Cola alla Spina 0.50lt</nome>
-            <prezzo>€ 4.00</prezzo>
+            <nome>Sciroppi 0.30lt/0.50lt</nome>
+            <prezzo>€ 2.00/3.00</prezzo>
             <ingredienti></ingredienti>
         </elemento>
         <elemento>
-            <nome>Sciroppi 0.30lt</nome>
-            <prezzo>€ 2.00</prezzo>
-            <ingredienti></ingredienti>
-        </elemento>
-        <elemento>
-            <nome>Sciroppi 0.50lt</nome>
+            <nome>Coca Cola 0.33lt</nome>
             <prezzo>€ 3.00</prezzo>
-            <ingredienti></ingredienti>
         </elemento>
         <elemento>
-            <nome>Sciroppi 0.30lt</nome>
+            <nome>Coca Cola Zero 0.33lt</nome>
+            <prezzo>€ 3.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Fanta 0.33lt</nome>
+            <prezzo>€ 3.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Sprite 0.33lt</nome>
+            <prezzo>€ 3.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Schweppes 0.18lt</nome>
             <prezzo>€ 2.00</prezzo>
-            <ingredienti></ingredienti>
+            <ingredienti> (Tonic / Lemon / Ginger) </ingredienti>
+        </elemento>
+        <elemento>
+            <nome>The Freddo 0.33lt</nome>
+            <prezzo>€ 3.00</prezzo>
+            <ingredienti> (Limone / Pesca) </ingredienti>
+        </elemento>
+        <elemento>
+            <nome>Gingerino 0.18lt</nome>
+            <prezzo>€ 2.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Chinotto 0.20lt</nome>
+            <prezzo>€ 2.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Energy Drink 0.25lt/0.50lt </nome>
+            <prezzo>€ 2.50/3.50</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Succo di Frutta 0.20lt</nome>
+            <prezzo>€ 2.50</prezzo>
         </elemento>
     </sezione>
-    <sezione data-name="snacks">
+    <sezione data-name="alcolici">
         <elemento>
-            <nome>Snack 1</nome>
-            <prezzo>€ 0.50</prezzo>
-            <ingredienti>Si</ingredienti>
+            <nome>Prosecco Calice</nome>
+            <prezzo>€ 2.50</prezzo>
         </elemento>
         <elemento>
-            <nome>Snack 2</nome>
-            <prezzo>€ 0.30</prezzo>
-            <ingredienti>Sisafasfasf</ingredienti>
+            <nome>Prosecco Bottiglia</nome>
+            <prezzo>€ 12.00</prezzo>
         </elemento>
         <elemento>
-            <nome>Snack 31</nome>
-            <prezzo>€ 0.50</prezzo>
-            <ingredienti>oaskdpoasd</ingredienti>
+            <nome>Vino Calice</nome>
+            <prezzo>€ 1.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Vino Bottiglia</nome>
+            <prezzo>€ 10.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Spritz</nome>
+            <prezzo>€ 1.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Spritz Aperol</nome>
+            <prezzo>€ 3.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Birra Bionda alla Spina 20/40cl</nome>
+            <prezzo>€ 2.50/4.50</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Birra Speciale alla Spina 30/50cl</nome>
+            <prezzo>€ 3.00/5.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Birra Caraffa Bionda/Speciale 2lt</nome>
+            <prezzo>€ 20.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Caraffa Cocktail</nome>
+            <prezzo>€ 35.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Amari</nome>
+            <prezzo>€ 3.00/4.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Punch</nome>
+            <prezzo>€ 3.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Martini</nome>
+            <prezzo>€ 3.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Grappa</nome>
+            <prezzo>€ 2.50/3.50</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Sambuca</nome>
+            <prezzo>€ 3.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Brandy</nome>
+            <prezzo>€ 3.50</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Bayles</nome>
+            <prezzo>€ 3.50</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Amaretto di Saronno</nome>
+            <prezzo>€ 3.50</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Vodka</nome>
+            <prezzo>€ 2.50</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Tequila</nome>
+            <prezzo>€ 2.50</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Whisky</nome>
+            <prezzo>€ 4.00/6.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Rum</nome>
+            <prezzo>€ 4.00/6.00</prezzo>
+        </elemento>
+        <elemento>
+            <subsection>Cocktails</subsection>
+        </elemento>
+        <elemento>
+            <nome>Americano</nome>
+            <prezzo>€ 5.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Negroni</nome>
+            <prezzo>€ 6.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Gin Tonic / Lemon</nome>
+            <prezzo>€ 5.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Vodka Tonic / Lemon</nome>
+            <prezzo>€ 5.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Rum &amp; Cola</nome>
+            <prezzo>€ 5.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Screwdriver</nome>
+            <prezzo>€ 5.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Pimm's Cup</nome>
+            <prezzo>€ 5.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Stinger</nome>
+            <prezzo>€ 5.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>White Spider</nome>
+            <prezzo>€ 5.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Garibaldi</nome>
+            <prezzo>€ 5.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Martini Cocktail</nome>
+            <prezzo>€ 5.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Piña Colada</nome>
+            <prezzo>€ 6.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Long Island Ice Tea</nome>
+            <prezzo>€ 6.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Bloody Mary</nome>
+            <prezzo>€ 5.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Tequila Sunrise</nome>
+            <prezzo>€ 5.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Di Saronno O.J.</nome>
+            <prezzo>€ 5.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Godfather</nome>
+            <prezzo>€ 5.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Gin Fizz</nome>
+            <prezzo>€ 5.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Black Russian</nome>
+            <prezzo>€ 5.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Chupito</nome>
+            <prezzo>€ 2.00</prezzo>
         </elemento>
     </sezione>
-    <sezione data-name="dolci">
+    <sezione data-name="caffetteria">
         <elemento>
-            <nome>Dolce 1</nome>
+            <nome>Caffè Espresso</nome>
+            <prezzo>€ 1.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Correzione</nome>
             <prezzo>€ 0.50</prezzo>
-            <ingredienti>cacac</ingredienti>
         </elemento>
         <elemento>
-            <nome>Dolce 2</nome>
-            <prezzo>€ 741.30</prezzo>
-            <ingredienti>lcaspdk</ingredienti>
+            <nome>Caffè Decaffeinato/d'Orzo</nome>
+            <prezzo>€ 1.20</prezzo>
         </elemento>
         <elemento>
-            <nome>Dolce 31</nome>
-            <prezzo>€ 360.50</prezzo>
-            <ingredienti>cadasd</ingredienti>
+            <nome>Caffè Americano</nome>
+            <prezzo>€ 1.50</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Caffè Shekerato</nome>
+            <prezzo>€ 2.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Macchiatone</nome>
+            <prezzo>€ 1.20</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Cappuccino</nome>
+            <prezzo>€ 1.50</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Latte Caldo</nome>
+            <prezzo>€ 1.50</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Latte Macchiato</nome>
+            <prezzo>€ 2.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Latte e Menta</nome>
+            <prezzo>€ 1.50</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Caffè al Ginseng</nome>
+            <prezzo>€ 1.50</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Cappuccino al Ginseng</nome>
+            <prezzo>€ 2.50</prezzo>
+        </elemento>
+        <elemento>
+            <nome>Dimensional Coffee</nome>
+            <prezzo>€ 3.00</prezzo>
+        </elemento>
+        <elemento>
+            <nome>The e Infusi</nome>
+            <prezzo>€ 2.50</prezzo>
         </elemento>
     </sezione>
 </menu>

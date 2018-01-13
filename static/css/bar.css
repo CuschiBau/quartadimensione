@@ -7,7 +7,13 @@
     cursor: pointer;
 }
 .menu_lists{ padding-bottom: 20px; }
-.item_cont > div:nth-child(even){
+.subtitle{
+    font-size: 20px;
+    background: #FFF;
+    text-align: center;
+    color: #000;
+}
+.item_cont > div:nth-child(even):not(.subtitle){
     background: #E6E6E6;
 }
 .item_cont > div{
@@ -20,9 +26,10 @@
     font-size: 13px;
     font-style: italic;
 }
+.menu_row{ align-items: center }
 @media (max-width: 768px) { 
     .menu_selector{
         font-size: 14px;
-        padding: 0px 5px;
+        padding: 12px;
     }
 }
